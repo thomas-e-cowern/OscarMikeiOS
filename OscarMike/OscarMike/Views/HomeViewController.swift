@@ -33,6 +33,10 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var bathrooms_pickerView: UIPickerView!
     @IBOutlet weak var flooring_button: UIButton!
     @IBOutlet weak var flooring_pickerView: UIPickerView!
+    @IBOutlet weak var garage_button: UIButton!
+    @IBOutlet weak var yard_button: UIButton!
+    @IBOutlet weak var pool_button: UIButton!
+    @IBOutlet weak var interior_button: UIButton!
     
     // Variables
     var buy_rent_data: [String] = [String]()
@@ -283,6 +287,49 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         flooring_pickerView.isHidden = false
     }
     
+    @IBAction func garage_button_pressed(_ sender: Any) {
+        
+        guard let status = garage_button.titleLabel?.text else { return }
+        
+        if status == "No" {
+            garage_button.setTitle("Yes", for: .normal)
+        } else {
+            garage_button.setTitle("No", for: .normal)
+        }
+    }
+    
+    @IBAction func yard_button_pressed(_ sender: Any) {
+        
+        guard let status = yard_button.titleLabel?.text else { return }
+        
+        if status == "No" {
+            yard_button.setTitle("Yes", for: .normal)
+        } else {
+            yard_button.setTitle("No", for: .normal)
+        }
+    }
+    
+    @IBAction func pool_button_pressed(_ sender: Any) {
+        
+        guard let status = pool_button.titleLabel?.text else { return }
+        
+        if status == "No" {
+            pool_button.setTitle("Yes", for: .normal)
+        } else {
+            pool_button.setTitle("No", for: .normal)
+        }
+    }
+    
+    @IBAction func interior_button_pressed(_ sender: Any) {
+        
+        guard let status = interior_button.titleLabel?.text else { return }
+        
+        if status == "No" {
+            interior_button.setTitle("Yes", for: .normal)
+        } else {
+            interior_button.setTitle("No", for: .normal)
+        }
+    }
     /*
     // MARK: - Navigation
 
