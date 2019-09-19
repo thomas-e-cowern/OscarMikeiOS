@@ -96,7 +96,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="2500"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="byZ-8l-FyS">
-                                                <rect key="frame" x="8" y="64" width="398" height="1747"/>
+                                                <rect key="frame" x="8" y="64" width="398" height="1993"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PCS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOt-1h-R0o">
                                                         <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
@@ -439,7 +439,6 @@
                                                                         <state key="normal" title="Click to Select"/>
                                                                         <connections>
                                                                             <action selector="bathrooms_buttton_pressed:" destination="2kU-ap-zdH" eventType="touchUpInside" id="uua-or-jZf"/>
-                                                                            <action selector="bedrooms_button_pressed:" destination="2kU-ap-zdH" eventType="touchUpInside" id="hXD-xj-JZU"/>
                                                                         </connections>
                                                                     </button>
                                                                 </subviews>
@@ -455,6 +454,40 @@
                                                             <constraint firstAttribute="trailing" secondItem="aof-W1-YNB" secondAttribute="trailing" id="T9v-IH-cRx"/>
                                                             <constraint firstItem="jn2-zC-y4h" firstAttribute="top" secondItem="aof-W1-YNB" secondAttribute="bottom" id="ZjC-RP-2OQ"/>
                                                             <constraint firstAttribute="trailing" secondItem="jn2-zC-y4h" secondAttribute="trailing" id="miE-El-n2N"/>
+                                                        </constraints>
+                                                    </stackView>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="WiZ-Mp-6kW">
+                                                        <rect key="frame" x="0.0" y="1747" width="398" height="246"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="IyP-rX-sfP">
+                                                                <rect key="frame" x="0.0" y="0.0" width="398" height="30"/>
+                                                                <subviews>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flooring Preference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Enh-Ra-e7K">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="199" height="30"/>
+                                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                        <nil key="textColor"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wA-Cn-e34">
+                                                                        <rect key="frame" x="199" y="0.0" width="199" height="30"/>
+                                                                        <state key="normal" title="Click to Select"/>
+                                                                        <connections>
+                                                                            <action selector="flooring_button_pressed:" destination="2kU-ap-zdH" eventType="touchUpInside" id="wq9-zP-Bhd"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3W4-hx-TRo">
+                                                                <rect key="frame" x="0.0" y="30" width="398" height="216"/>
+                                                            </pickerView>
+                                                        </subviews>
+                                                        <constraints>
+                                                            <constraint firstItem="IyP-rX-sfP" firstAttribute="leading" secondItem="WiZ-Mp-6kW" secondAttribute="leading" id="Le4-Ja-d7o"/>
+                                                            <constraint firstItem="3W4-hx-TRo" firstAttribute="top" secondItem="IyP-rX-sfP" secondAttribute="bottom" id="N5c-kZ-v40"/>
+                                                            <constraint firstAttribute="trailing" secondItem="IyP-rX-sfP" secondAttribute="trailing" id="T5z-np-kzW"/>
+                                                            <constraint firstItem="3W4-hx-TRo" firstAttribute="leading" secondItem="WiZ-Mp-6kW" secondAttribute="leading" id="W1p-fc-Hyo"/>
+                                                            <constraint firstItem="IyP-rX-sfP" firstAttribute="top" secondItem="WiZ-Mp-6kW" secondAttribute="top" id="YD5-0p-19h"/>
+                                                            <constraint firstAttribute="trailing" secondItem="3W4-hx-TRo" secondAttribute="trailing" id="teo-Fo-Hba"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
@@ -496,6 +529,8 @@
                         <outlet property="bedrooms_pickerView" destination="mCb-Sn-mqz" id="waE-Ez-6AN"/>
                         <outlet property="buy_rent_button" destination="2cH-7V-cFX" id="yBv-FY-mYf"/>
                         <outlet property="buy_rent_pickerView" destination="EUP-YG-aTr" id="Lzu-4Q-Uw4"/>
+                        <outlet property="flooring_button" destination="0wA-Cn-e34" id="OJC-Cw-Jh5"/>
+                        <outlet property="flooring_pickerView" destination="3W4-hx-TRo" id="LhX-a5-reh"/>
                         <outlet property="house_type_button" destination="2ID-8w-Hbe" id="v4C-5o-Gut"/>
                         <outlet property="house_type_pickerView" destination="noK-he-oKk" id="CPP-4B-KVT"/>
                         <outlet property="kids_button" destination="Uug-Xu-TtU" id="CgD-cx-Bwc"/>

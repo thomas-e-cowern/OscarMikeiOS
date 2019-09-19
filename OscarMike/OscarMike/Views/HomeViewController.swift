@@ -31,6 +31,8 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     @IBOutlet weak var bedrooms_pickerView: UIPickerView!
     @IBOutlet weak var bathrooms_button: UIButton!
     @IBOutlet weak var bathrooms_pickerView: UIPickerView!
+    @IBOutlet weak var flooring_button: UIButton!
+    @IBOutlet weak var flooring_pickerView: UIPickerView!
     
     // Variables
     var buy_rent_data: [String] = [String]()
@@ -38,12 +40,14 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
     var locstion_data: [String] = [String]()
     var bedrooms_data: [Int] = [Int]()
     var bathrooms_data: [Int] = [Int]()
+    var flooring_data: [String] = [String]()
     var buy_rent_value: String = ""
     var house_type_value: String = ""
     var pcs_date_string: String = ""
     var location_value: String = ""
     var bedrooms_value: Int = 0
     var bathrooms_value: Int = 0
+    var flooring_value: String = ""
     
     // Lifecycle
     override func viewDidLoad() {
@@ -61,6 +65,8 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         bedrooms_pickerView.dataSource = self
         bathrooms_pickerView.delegate = self
         bathrooms_pickerView.dataSource = self
+        flooring_pickerView.delegate = self
+        flooring_pickerView.dataSource = self
         
         
         // Data
@@ -69,6 +75,7 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         locstion_data = ["Urban", "Suburban", "Rural"]
         bedrooms_data = [1, 2, 3, 4, 5, 6]
         bathrooms_data = [1, 2, 3, 4]
+        flooring_data = ["Carpet", "Tile", "Wood", "Linoleum"]
         
         
         
@@ -80,6 +87,7 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         location_pickerView.isHidden = true
         bedrooms_pickerView.isHidden = true
         bathrooms_pickerView.isHidden = true
+        flooring_pickerView.isHidden = true
         
     }
     
@@ -95,6 +103,8 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         case bedrooms_pickerView:
             return 1
         case bathrooms_pickerView:
+            return 1
+        case flooring_pickerView:
             return 1
         default:
             return 0
@@ -114,6 +124,8 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             return bedrooms_data.count
         case bathrooms_pickerView:
             return bathrooms_data.count
+        case flooring_pickerView:
+            return flooring_data.count
         default:
             return 0
         }
@@ -132,6 +144,8 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             return "\(bedrooms_data[row])"
         case bathrooms_pickerView:
             return "\(bathrooms_data[row])"
+        case flooring_pickerView:
+            return flooring_data[row]
         default:
             return ""
         }
@@ -167,6 +181,10 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
             bathrooms_value = bedrooms_data[row]
             bathrooms_button.setTitle("\(bathrooms_value)", for: .normal)
             bathrooms_pickerView.isHidden = true
+        case flooring_pickerView:
+            flooring_value = flooring_data[row]
+            flooring_button.setTitle(flooring_value, for: .normal)
+            flooring_pickerView.isHidden = true
         default:
             break
         }
@@ -260,6 +278,10 @@ class HomeViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDa
         bathrooms_pickerView.isHidden = false
     }
     
+    // Flooring
+    @IBAction func flooring_button_pressed(_ sender: Any) {
+        flooring_pickerView.isHidden = false
+    }
     
     /*
     // MARK: - Navigation
