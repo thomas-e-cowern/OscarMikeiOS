@@ -1,0 +1,184 @@
+2019-09-23 14:23:11 +0000  Initial pipeline context: <IDEDistributionProcessingPipelineContext: 0x7fae88e062a0; archive(resolved)='<IDEArchive: 0x7fae87877530>', distributionTask(resolved)='2', distributionDestination(resolved)='2', distributionMethod(resolved)='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fae89131860>', team(resolved)='<IDEProvisioningDisambiguatableBasicTeam: 0x7fae80f9cc50; teamID='56F54J4H3N', teamName='Thomas Cowern', teamType='Individual', username='tcowern@gmail.com', isFreeProvisioningTeam='0'>'>
+	Chain (13, self inclusive):
+	<IDEDistributionProcessingPipelineContext: 0x7fae88e062a0; archive = '<IDEArchive: 0x7fae87877530>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fae89131860>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fae80f9cc50; teamID='56F54J4H3N', teamName='Thomas Cowern', teamType='Individual', username='tcowern@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionProcessingPipelineContext: 0x7fae87a8b420; archive = '<IDEArchive: 0x7fae87877530>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fae89131860>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fae80f9cc50; teamID='56F54J4H3N', teamName='Thomas Cowern', teamType='Individual', username='tcowern@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fae8343dd80; archive = '<IDEArchive: 0x7fae87877530>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fae89131860>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fae80f9cc50; teamID='56F54J4H3N', teamName='Thomas Cowern', teamType='Individual', username='tcowern@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fae87aadaf0; archive = '<IDEArchive: 0x7fae87877530>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fae89131860>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fae80f9cc50; teamID='56F54J4H3N', teamName='Thomas Cowern', teamType='Individual', username='tcowern@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fae87acb910; archive = '<IDEArchive: 0x7fae87877530>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fae89131860>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fae80f9cc50; teamID='56F54J4H3N', teamName='Thomas Cowern', teamType='Individual', username='tcowern@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fae87a81450; archive = '<IDEArchive: 0x7fae87877530>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fae89131860>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fae80f9cc50; teamID='56F54J4H3N', teamName='Thomas Cowern', teamType='Individual', username='tcowern@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fae83439590; archive = '<IDEArchive: 0x7fae87877530>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fae89131860>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fae80f9cc50; teamID='56F54J4H3N', teamName='Thomas Cowern', teamType='Individual', username='tcowern@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fae8735c430; archive = '<IDEArchive: 0x7fae87877530>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fae89131860>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fae80f9cc50; teamID='56F54J4H3N', teamName='Thomas Cowern', teamType='Individual', username='tcowern@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fae87ca07f0; archive = '<IDEArchive: 0x7fae87877530>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fae89131860>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fae80f9cc50; teamID='56F54J4H3N', teamName='Thomas Cowern', teamType='Individual', username='tcowern@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fae87c87950; archive = '<IDEArchive: 0x7fae87877530>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fae89131860>', team='<IDEProvisioningDisambiguatableBasicTeam: 0x7fae80f9cc50; teamID='56F54J4H3N', teamName='Thomas Cowern', teamType='Individual', username='tcowern@gmail.com', isFreeProvisioningTeam='0'>'>
+	<IDEDistributionContext: 0x7fae834ae6d0; archive = '<IDEArchive: 0x7fae87877530>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fae89131860>', team='(null)'>
+	<IDEDistributionContext: 0x7fae87ae89b0; archive = '<IDEArchive: 0x7fae87877530>', distributionMethod='<IDEDistributionMethodiOSAppStoreDistribution: 0x7fae89131860>', team='(null)'>
+	<IDEDistributionContext: 0x7fae87c3c0b0; archive = '<IDEArchive: 0x7fae87877530>', distributionMethod='(null)', team='(null)'>
+</IDEDistributionProcessingPipelineContext: 0x7fae88e062a0>
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionCreateDestRootStep
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionCopyItemStep
+2019-09-23 14:23:11 +0000  Running /usr/bin/ditto '-V' '/Users/tcowern/Library/Developer/Xcode/Archives/2019-09-23/OscarMike 9-23-19, 10.22 AM.xcarchive/Products/Applications/OM Reality.app' '/var/folders/_1/_blx4tl92879sbm6hz_v15080000gp/T/XcodeDistPipeline.~~~v5gAA3/Root/Payload/OM Reality.app'
+2019-09-23 14:23:11 +0000  >>> Copying /Users/tcowern/Library/Developer/Xcode/Archives/2019-09-23/OscarMike 9-23-19, 10.22 AM.xcarchive/Products/Applications/OM Reality.app 
+2019-09-23 14:23:11 +0000  copying file ./_CodeSignature/CodeResources ... 
+2019-09-23 14:23:11 +0000  7651 bytes for ./_CodeSignature/CodeResources
+2019-09-23 14:23:11 +0000  copying file ./OscarMike.momd/VersionInfo.plist ... 
+2019-09-23 14:23:11 +0000  155 bytes for ./OscarMike.momd/VersionInfo.plist
+2019-09-23 14:23:11 +0000  copying file ./OscarMike.momd/OscarMike.omo ... 
+2019-09-23 14:23:11 +0000  704 bytes for ./OscarMike.momd/OscarMike.omo
+2019-09-23 14:23:11 +0000  copying file ./OscarMike.momd/OscarMike.mom ... 
+2019-09-23 14:23:11 +0000  513 bytes for ./OscarMike.momd/OscarMike.mom
+2019-09-23 14:23:11 +0000  copying file ./Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib/objects-13.0+.nib ... 
+2019-09-23 14:23:11 +0000  1290 bytes for ./Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib/objects-13.0+.nib
+2019-09-23 14:23:11 +0000  copying file ./Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib/runtime.nib ... 
+2019-09-23 14:23:11 +0000  1290 bytes for ./Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib/runtime.nib
+2019-09-23 14:23:11 +0000  copying file ./Base.lproj/Main.storyboardc/UIViewController-2kU-ap-zdH.nib/objects-13.0+.nib ... 
+2019-09-23 14:23:11 +0000  986 bytes for ./Base.lproj/Main.storyboardc/UIViewController-2kU-ap-zdH.nib/objects-13.0+.nib
+2019-09-23 14:23:11 +0000  copying file ./Base.lproj/Main.storyboardc/UIViewController-2kU-ap-zdH.nib/runtime.nib ... 
+2019-09-23 14:23:11 +0000  986 bytes for ./Base.lproj/Main.storyboardc/UIViewController-2kU-ap-zdH.nib/runtime.nib
+2019-09-23 14:23:11 +0000  copying file ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/objects-13.0+.nib ... 
+2019-09-23 14:23:11 +0000  5587 bytes for ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/objects-13.0+.nib
+copying file ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/runtime.nib ... 
+2019-09-23 14:23:11 +0000  5591 bytes for ./Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/runtime.nib
+2019-09-23 14:23:11 +0000  copying file ./Base.lproj/Main.storyboardc/Info.plist ... 
+2019-09-23 14:23:11 +0000  333 bytes for ./Base.lproj/Main.storyboardc/Info.plist
+2019-09-23 14:23:11 +0000  copying file ./Base.lproj/Main.storyboardc/2kU-ap-zdH-view-seR-gO-CYX.nib/objects-13.0+.nib ... 
+2019-09-23 14:23:11 +0000  24378 bytes for ./Base.lproj/Main.storyboardc/2kU-ap-zdH-view-seR-gO-CYX.nib/objects-13.0+.nib
+2019-09-23 14:23:11 +0000  copying file ./Base.lproj/Main.storyboardc/2kU-ap-zdH-view-seR-gO-CYX.nib/runtime.nib ... 
+2019-09-23 14:23:11 +0000  24384 bytes for ./Base.lproj/Main.storyboardc/2kU-ap-zdH-view-seR-gO-CYX.nib/runtime.nib
+2019-09-23 14:23:11 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib ... 
+2019-09-23 14:23:11 +0000  2472 bytes for ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib
+2019-09-23 14:23:11 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib ... 
+2019-09-23 14:23:11 +0000  2470 bytes for ./Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib
+2019-09-23 14:23:11 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-13.0+.nib ... 
+2019-09-23 14:23:11 +0000  896 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-13.0+.nib
+copying file ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib ... 
+2019-09-23 14:23:11 +0000  896 bytes for ./Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib
+2019-09-23 14:23:11 +0000  copying file ./Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+2019-09-23 14:23:11 +0000  258 bytes for ./Base.lproj/LaunchScreen.storyboardc/Info.plist
+2019-09-23 14:23:11 +0000  copying file ./OM Reality ... 
+2019-09-23 14:23:11 +0000  307152 bytes for ./OM Reality
+copying file ./Assets.car ... 
+2019-09-23 14:23:11 +0000  1100704 bytes for ./Assets.car
+2019-09-23 14:23:11 +0000  copying file ./embedded.mobileprovision ... 
+2019-09-23 14:23:11 +0000  7677 bytes for ./embedded.mobileprovision
+2019-09-23 14:23:11 +0000  copying file ./Info.plist ... 
+2019-09-23 14:23:11 +0000  1122 bytes for ./Info.plist
+copying file ./PkgInfo ... 
+2019-09-23 14:23:11 +0000  8 bytes for ./PkgInfo
+2019-09-23 14:23:11 +0000  /usr/bin/ditto exited with 0
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionEmbedProfileStep
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionItemRemovalStep
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionAppThinningPlistStep
+2019-09-23 14:23:11 +0000  Skipping step: IDEDistributionAppThinningPlistStep because it said so
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionCompileBitcodeStep
+2019-09-23 14:23:11 +0000  Skipping step: IDEDistributionCompileBitcodeStep because it said so
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionCodeSlimmingStep
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionCopyBCSymbolMapsStep
+2019-09-23 14:23:11 +0000  Running /usr/bin/ditto '-V' '/Users/tcowern/Library/Developer/Xcode/Archives/2019-09-23/OscarMike 9-23-19, 10.22 AM.xcarchive/BCSymbolMaps/7B9AD28F-6417-36ED-BE22-EAD755CED48F.bcsymbolmap' '/var/folders/_1/_blx4tl92879sbm6hz_v15080000gp/T/XcodeDistPipeline.~~~v5gAA3/Root/BCSymbolMaps/7B9AD28F-6417-36ED-BE22-EAD755CED48F.bcsymbolmap'
+2019-09-23 14:23:11 +0000  >>> Copying /Users/tcowern/Library/Developer/Xcode/Archives/2019-09-23/OscarMike 9-23-19, 10.22 AM.xcarchive/BCSymbolMaps/7B9AD28F-6417-36ED-BE22-EAD755CED48F.bcsymbolmap 
+2019-09-23 14:23:11 +0000  copying file ./7B9AD28F-6417-36ED-BE22-EAD755CED48F.bcsymbolmap ... 
+2019-09-23 14:23:11 +0000  46100 bytes for ./7B9AD28F-6417-36ED-BE22-EAD755CED48F.bcsymbolmap
+2019-09-23 14:23:11 +0000  /usr/bin/ditto exited with 0
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionSymbolsStep
+2019-09-23 14:23:11 +0000  Excluding symbols for OM Reality.app
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionCopyAppleProvidedContentStep
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionAppThinningStep
+2019-09-23 14:23:11 +0000  Skipping step: IDEDistributionAppThinningStep because it said so
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionArchThinningStep
+2019-09-23 14:23:11 +0000  Running /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo '/var/folders/_1/_blx4tl92879sbm6hz_v15080000gp/T/XcodeDistPipeline.~~~v5gAA3/Root/Payload/OM Reality.app/OM Reality' '-verify_arch' 'arm64e'
+2019-09-23 14:23:11 +0000  /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo exited with 1
+2019-09-23 14:23:11 +0000  Skipping architecture thinning for item "OM Reality" because arch "arm64e" wasn't found
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionODRStep
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionStripXattrsStep
+2019-09-23 14:23:11 +0000  Running /usr/bin/xattr '-crs' '/var/folders/_1/_blx4tl92879sbm6hz_v15080000gp/T/XcodeDistPipeline.~~~v5gAA3/Root/Payload/OM Reality.app'
+2019-09-23 14:23:11 +0000  /usr/bin/xattr exited with 0
+2019-09-23 14:23:11 +0000  Processing step: IDEDistributionCodesignStep
+2019-09-23 14:23:11 +0000  Entitlements for <IDEDistributionItem: 0x7fae87cd6b80; bundleID='MobileSoftwareServices.OscarMike', path='<DVTFilePath:0x7fae87b543d0:'/Users/tcowern/Library/Developer/Xcode/Archives/2019-09-23/OscarMike 9-23-19, 10.22 AM.xcarchive/Products/Applications/OM Reality.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fae833d0690; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fae87cb1b60; name='iPhone Developer: Thomas Cowern (HBERYDJ23Z)', hash='90F94254D03B0D0976DDD24EDEA92582667A59FE', serialNumber='678485A8A7388684', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2018-11-26 04:14:41 +0000''>', entitlements='{
+    "application-identifier" = "56F54J4H3N.MobileSoftwareServices.OscarMike";
+    "com.apple.developer.team-identifier" = 56F54J4H3N;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "56F54J4H3N.MobileSoftwareServices.OscarMike"
+    );
+}', teamID='56F54J4H3N', identifier='MobileSoftwareServices.OscarMike', executablePath='<DVTFilePath:0x7fae88e3ddb0:'/Users/tcowern/Library/Developer/Xcode/Archives/2019-09-23/OscarMike 9-23-19, 10.22 AM.xcarchive/Products/Applications/OM Reality.app/OM Reality'>', hardenedRuntime='0'>'>: {
+    "application-identifier" = "56F54J4H3N.MobileSoftwareServices.OscarMike";
+    "beta-reports-active" = 1;
+    "com.apple.developer.team-identifier" = 56F54J4H3N;
+    "get-task-allow" = 0;
+    "keychain-access-groups" =     (
+        "56F54J4H3N.MobileSoftwareServices.OscarMike"
+    );
+}
+2019-09-23 14:23:11 +0000  Writing entitlements for <IDEDistributionItem: 0x7fae87cd6b80; bundleID='MobileSoftwareServices.OscarMike', path='<DVTFilePath:0x7fae87b543d0:'/Users/tcowern/Library/Developer/Xcode/Archives/2019-09-23/OscarMike 9-23-19, 10.22 AM.xcarchive/Products/Applications/OM Reality.app'>', codeSigningInfo='<_DVTCodeSigningInformation_Path: 0x7fae833d0690; isSigned='1', isAdHocSigned='0', signingCertificate='<DVTSigningCertificate: 0x7fae87afb600; name='iPhone Developer: Thomas Cowern (HBERYDJ23Z)', hash='90F94254D03B0D0976DDD24EDEA92582667A59FE', serialNumber='678485A8A7388684', certificateKinds='(
+    "1.2.840.113635.100.6.1.2"
+), issueDate='2018-11-26 04:14:41 +0000''>', entitlements='{
+    "application-identifier" = "56F54J4H3N.MobileSoftwareServices.OscarMike";
+    "com.apple.developer.team-identifier" = 56F54J4H3N;
+    "get-task-allow" = 1;
+    "keychain-access-groups" =     (
+        "56F54J4H3N.MobileSoftwareServices.OscarMike"
+    );
+}', teamID='56F54J4H3N', identifier='MobileSoftwareServices.OscarMike', executablePath='<DVTFilePath:0x7fae88e3ddb0:'/Users/tcowern/Library/Developer/Xcode/Archives/2019-09-23/OscarMike 9-23-19, 10.22 AM.xcarchive/Products/Applications/OM Reality.app/OM Reality'>', hardenedRuntime='0'>'> to: /var/folders/_1/_blx4tl92879sbm6hz_v15080000gp/T/XcodeDistPipeline.~~~v5gAA3/entitlements~~~Y5VP7G
+2019-09-23 14:23:11 +0000  Running /usr/bin/codesign '-vvv' '--force' '--sign' '923D3E14A62FE4D5D9A38397ECEAA8C96BAA2A90' '--entitlements' '/var/folders/_1/_blx4tl92879sbm6hz_v15080000gp/T/XcodeDistPipeline.~~~v5gAA3/entitlements~~~Y5VP7G' '--preserve-metadata=identifier,flags,runtime' '/var/folders/_1/_blx4tl92879sbm6hz_v15080000gp/T/XcodeDistPipeline.~~~v5gAA3/Root/Payload/OM Reality.app'
+2019-09-23 14:23:18 +0000  /var/folders/_1/_blx4tl92879sbm6hz_v15080000gp/T/XcodeDistPipeline.~~~v5gAA3/Root/Payload/OM Reality.app: signed app bundle with Mach-O thin (arm64) [MobileSoftwareServices.OscarMike]
+2019-09-23 14:23:18 +0000  /usr/bin/codesign exited with 0
+2019-09-23 14:23:18 +0000  Processing step: IDEDistributionZipODRItemStep
+2019-09-23 14:23:18 +0000  Skipping step: IDEDistributionZipODRItemStep because it said so
+2019-09-23 14:23:18 +0000  Processing step: IDEDistributionCreateIPAStep
+2019-09-23 14:23:18 +0000  Running /usr/bin/ditto '-V' '-c' '-k' '--norsrc' '/var/folders/_1/_blx4tl92879sbm6hz_v15080000gp/T/XcodeDistPipeline.~~~v5gAA3/Root' '/var/folders/_1/_blx4tl92879sbm6hz_v15080000gp/T/XcodeDistPipeline.~~~v5gAA3/Packages/OscarMike.ipa'
+2019-09-23 14:23:18 +0000  >>> Copying /var/folders/_1/_blx4tl92879sbm6hz_v15080000gp/T/XcodeDistPipeline.~~~v5gAA3/Root 
+2019-09-23 14:23:18 +0000  copying file ./BCSymbolMaps/7B9AD28F-6417-36ED-BE22-EAD755CED48F.bcsymbolmap ... 
+2019-09-23 14:23:18 +0000  46100 bytes for ./BCSymbolMaps/7B9AD28F-6417-36ED-BE22-EAD755CED48F.bcsymbolmap
+2019-09-23 14:23:18 +0000  copying file ./Payload/OM Reality.app/_CodeSignature/CodeResources ... 
+2019-09-23 14:23:18 +0000  7651 bytes for ./Payload/OM Reality.app/_CodeSignature/CodeResources
+2019-09-23 14:23:18 +0000  copying file ./Payload/OM Reality.app/OscarMike.momd/VersionInfo.plist ... 
+2019-09-23 14:23:18 +0000  155 bytes for ./Payload/OM Reality.app/OscarMike.momd/VersionInfo.plist
+copying file ./Payload/OM Reality.app/OscarMike.momd/OscarMike.omo ... 
+704 bytes for ./Payload/OM Reality.app/OscarMike.momd/OscarMike.omo
+2019-09-23 14:23:18 +0000  copying file ./Payload/OM Reality.app/OscarMike.momd/OscarMike.mom ... 
+513 bytes for ./Payload/OM Reality.app/OscarMike.momd/OscarMike.mom
+2019-09-23 14:23:18 +0000  copying file ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib/objects-13.0+.nib ... 
+2019-09-23 14:23:18 +0000  1290 bytes for ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib/objects-13.0+.nib
+copying file ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib/runtime.nib ... 
+2019-09-23 14:23:18 +0000  1290 bytes for ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/UIViewController-BYZ-38-t0r.nib/runtime.nib
+2019-09-23 14:23:18 +0000  copying file ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/UIViewController-2kU-ap-zdH.nib/objects-13.0+.nib ... 
+2019-09-23 14:23:18 +0000  986 bytes for ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/UIViewController-2kU-ap-zdH.nib/objects-13.0+.nib
+copying file ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/UIViewController-2kU-ap-zdH.nib/runtime.nib ... 
+986 bytes for ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/UIViewController-2kU-ap-zdH.nib/runtime.nib
+2019-09-23 14:23:18 +0000  copying file ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/objects-13.0+.nib ... 
+2019-09-23 14:23:18 +0000  5587 bytes for ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/objects-13.0+.nib
+2019-09-23 14:23:18 +0000  copying file ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/runtime.nib ... 
+2019-09-23 14:23:18 +0000  5591 bytes for ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/BYZ-38-t0r-view-8bC-Xf-vdC.nib/runtime.nib
+2019-09-23 14:23:18 +0000  copying file ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/Info.plist ... 
+333 bytes for ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/Info.plist
+2019-09-23 14:23:18 +0000  copying file ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/2kU-ap-zdH-view-seR-gO-CYX.nib/objects-13.0+.nib ... 
+2019-09-23 14:23:18 +0000  24378 bytes for ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/2kU-ap-zdH-view-seR-gO-CYX.nib/objects-13.0+.nib
+copying file ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/2kU-ap-zdH-view-seR-gO-CYX.nib/runtime.nib ... 
+2019-09-23 14:23:18 +0000  24384 bytes for ./Payload/OM Reality.app/Base.lproj/Main.storyboardc/2kU-ap-zdH-view-seR-gO-CYX.nib/runtime.nib
+2019-09-23 14:23:18 +0000  copying file ./Payload/OM Reality.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib ... 
+2019-09-23 14:23:18 +0000  2472 bytes for ./Payload/OM Reality.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/objects-13.0+.nib
+copying file ./Payload/OM Reality.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib ... 
+2019-09-23 14:23:18 +0000  2470 bytes for ./Payload/OM Reality.app/Base.lproj/LaunchScreen.storyboardc/01J-lp-oVM-view-Ze5-6b-2t3.nib/runtime.nib
+2019-09-23 14:23:18 +0000  copying file ./Payload/OM Reality.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-13.0+.nib ... 
+2019-09-23 14:23:18 +0000  896 bytes for ./Payload/OM Reality.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/objects-13.0+.nib
+copying file ./Payload/OM Reality.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib ... 
+2019-09-23 14:23:18 +0000  896 bytes for ./Payload/OM Reality.app/Base.lproj/LaunchScreen.storyboardc/UIViewController-01J-lp-oVM.nib/runtime.nib
+copying file ./Payload/OM Reality.app/Base.lproj/LaunchScreen.storyboardc/Info.plist ... 
+258 bytes for ./Payload/OM Reality.app/Base.lproj/LaunchScreen.storyboardc/Info.plist
+copying file ./Payload/OM Reality.app/OM Reality ... 
+2019-09-23 14:23:18 +0000  251520 bytes for ./Payload/OM Reality.app/OM Reality
+copying file ./Payload/OM Reality.app/Assets.car ... 
+2019-09-23 14:23:18 +0000  1100704 bytes for ./Payload/OM Reality.app/Assets.car
+copying file ./Payload/OM Reality.app/embedded.mobileprovision ... 
+2019-09-23 14:23:18 +0000  9325 bytes for ./Payload/OM Reality.app/embedded.mobileprovision
+copying file ./Payload/OM Reality.app/Info.plist ... 
+2019-09-23 14:23:18 +0000  1122 bytes for ./Payload/OM Reality.app/Info.plist
+copying file ./Payload/OM Reality.app/PkgInfo ... 
+8 bytes for ./Payload/OM Reality.app/PkgInfo
+2019-09-23 14:23:18 +0000  /usr/bin/ditto exited with 0
+2019-09-23 14:23:18 +0000  Processing step: IDEDistributionAppStoreInformationStep
+2019-09-23 14:23:18 +0000  Skipping step: IDEDistributionAppStoreInformationStep because it said so
+2019-09-23 14:23:18 +0000  Processing step: IDEDistributionGenerateProcessedDistributionItems
+2019-09-23 14:23:18 +0000  Processing step: IDEDistributionCreateManifestStep
+2019-09-23 14:23:18 +0000  Skipping step: IDEDistributionCreateManifestStep because it said so
