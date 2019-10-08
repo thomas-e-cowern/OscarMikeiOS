@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>OscarMike.ipa</key>
+	<array>
+		<dict>
+			<key>architectures</key>
+			<array>
+				<string>arm64</string>
+			</array>
+			<key>bitcode</key>
+			<true/>
+			<key>certificate</key>
+			<dict>
+				<key>SHA1</key>
+				<string>923D3E14A62FE4D5D9A38397ECEAA8C96BAA2A90</string>
+				<key>dateExpires</key>
+				<string>9/22/20</string>
+				<key>type</key>
+				<string>Apple Distribution</string>
+			</dict>
+			<key>entitlements</key>
+			<dict>
+				<key>application-identifier</key>
+				<string>56F54J4H3N.MobileSoftwareServices.OscarMike</string>
+				<key>beta-reports-active</key>
+				<true/>
+				<key>com.apple.developer.team-identifier</key>
+				<string>56F54J4H3N</string>
+				<key>get-task-allow</key>
+				<false/>
+				<key>keychain-access-groups</key>
+				<array>
+					<string>56F54J4H3N.MobileSoftwareServices.OscarMike</string>
+				</array>
+			</dict>
+			<key>name</key>
+			<string>OM Reality.app</string>
+			<key>profile</key>
+			<dict>
+				<key>UUID</key>
+				<string>5c7b7f69-bb10-4560-b009-ebaeb4a0688e</string>
+				<key>name</key>
+				<string>iOS Team Store Provisioning Profile: MobileSoftwareServices.OscarMike</string>
+			</dict>
+			<key>symbols</key>
+			<true/>
+			<key>team</key>
+			<dict>
+				<key>id</key>
+				<string>56F54J4H3N</string>
+				<key>name</key>
+				<string>Thomas Cowern</string>
+			</dict>
+		</dict>
+	</array>
+</dict>
+</plist>
