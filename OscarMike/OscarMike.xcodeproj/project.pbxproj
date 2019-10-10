@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		413267B6234D014600ACFAB3 /* FamilyInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413267B5234D014600ACFAB3 /* FamilyInfoViewController.swift */; };
+		413267B8234D15A300ACFAB3 /* FindSellViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413267B7234D15A300ACFAB3 /* FindSellViewController.swift */; };
+		413267BA234D1E6200ACFAB3 /* LocationInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 413267B9234D1E6200ACFAB3 /* LocationInfoViewController.swift */; };
 		418AA887234CED07007B805A /* PersonalInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 418AA886234CED07007B805A /* PersonalInfoViewController.swift */; };
+		41D2CB04234E59C1004FD17D /* HomeInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41D2CB03234E59C1004FD17D /* HomeInfoViewController.swift */; };
+		41FE00C3234F8A210050DD86 /* FinancialInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FE00C2234F8A210050DD86 /* FinancialInfoViewController.swift */; };
 		41FE1B01232FBB7900B94E97 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FE1B00232FBB7900B94E97 /* AppDelegate.swift */; };
 		41FE1B03232FBB7900B94E97 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41FE1B02232FBB7900B94E97 /* ViewController.swift */; };
 		41FE1B06232FBB7900B94E97 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 41FE1B04232FBB7900B94E97 /* Main.storyboard */; };
@@ -19,8 +22,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		413267B5234D014600ACFAB3 /* FamilyInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamilyInfoViewController.swift; sourceTree = "<group>"; };
+		413267B7234D15A300ACFAB3 /* FindSellViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindSellViewController.swift; sourceTree = "<group>"; };
+		413267B9234D1E6200ACFAB3 /* LocationInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationInfoViewController.swift; sourceTree = "<group>"; };
 		418AA886234CED07007B805A /* PersonalInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalInfoViewController.swift; sourceTree = "<group>"; };
+		41D2CB03234E59C1004FD17D /* HomeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInfoViewController.swift; sourceTree = "<group>"; };
+		41FE00C2234F8A210050DD86 /* FinancialInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialInfoViewController.swift; sourceTree = "<group>"; };
 		41FE1AFD232FBB7900B94E97 /* O-M (On The Move).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "O-M (On The Move).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FE1B00232FBB7900B94E97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41FE1B02232FBB7900B94E97 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -80,9 +86,11 @@
 		41FE1B16232FC72E00B94E97 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				413267B5234D014600ACFAB3 /* FamilyInfoViewController.swift */,
+				41D2CB03234E59C1004FD17D /* HomeInfoViewController.swift */,
+				413267B9234D1E6200ACFAB3 /* LocationInfoViewController.swift */,
 				418AA886234CED07007B805A /* PersonalInfoViewController.swift */,
 				41FE1B02232FBB7900B94E97 /* ViewController.swift */,
+				413267B7234D15A300ACFAB3 /* FindSellViewController.swift */,
 				41FE1B19232FFD7F00B94E97 /* HomeViewController.swift */,
 			);
 			path = Views;
@@ -100,6 +108,7 @@
 			children = (
 				41FE1B00232FBB7900B94E97 /* AppDelegate.swift */,
 				41FE1B04232FBB7900B94E97 /* Main.storyboard */,
+				41FE00C2234F8A210050DD86 /* FinancialInfoViewController.swift */,
 				41FE1B0A232FBB7D00B94E97 /* Assets.xcassets */,
 				41FE1B0C232FBB7D00B94E97 /* LaunchScreen.storyboard */,
 				41FE1B0F232FBB7D00B94E97 /* Info.plist */,
@@ -179,12 +188,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				413267B6234D014600ACFAB3 /* FamilyInfoViewController.swift in Sources */,
 				41FE1B03232FBB7900B94E97 /* ViewController.swift in Sources */,
+				413267B8234D15A300ACFAB3 /* FindSellViewController.swift in Sources */,
+				413267BA234D1E6200ACFAB3 /* LocationInfoViewController.swift in Sources */,
+				41D2CB04234E59C1004FD17D /* HomeInfoViewController.swift in Sources */,
 				41FE1B09232FBB7900B94E97 /* OscarMike.xcdatamodeld in Sources */,
 				418AA887234CED07007B805A /* PersonalInfoViewController.swift in Sources */,
 				41FE1B01232FBB7900B94E97 /* AppDelegate.swift in Sources */,
 				41FE1B1A232FFD8000B94E97 /* HomeViewController.swift in Sources */,
+				41FE00C3234F8A210050DD86 /* FinancialInfoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
