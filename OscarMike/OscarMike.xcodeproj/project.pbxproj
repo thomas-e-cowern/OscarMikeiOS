@@ -86,6 +86,7 @@
 		41FE1B16232FC72E00B94E97 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				41FE00C2234F8A210050DD86 /* FinancialInfoViewController.swift */,
 				41D2CB03234E59C1004FD17D /* HomeInfoViewController.swift */,
 				413267B9234D1E6200ACFAB3 /* LocationInfoViewController.swift */,
 				418AA886234CED07007B805A /* PersonalInfoViewController.swift */,
@@ -108,7 +109,6 @@
 			children = (
 				41FE1B00232FBB7900B94E97 /* AppDelegate.swift */,
 				41FE1B04232FBB7900B94E97 /* Main.storyboard */,
-				41FE00C2234F8A210050DD86 /* FinancialInfoViewController.swift */,
 				41FE1B0A232FBB7D00B94E97 /* Assets.xcassets */,
 				41FE1B0C232FBB7D00B94E97 /* LaunchScreen.storyboard */,
 				41FE1B0F232FBB7D00B94E97 /* Info.plist */,

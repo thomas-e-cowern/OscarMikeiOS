@@ -917,6 +917,9 @@
                                                     <constraint firstAttribute="height" constant="50" id="Knv-62-71G"/>
                                                 </constraints>
                                                 <state key="normal" title="Send Email to Get Assistance"/>
+                                                <connections>
+                                                    <action selector="emailButtonPressed:" destination="pxm-vz-Y9h" eventType="touchUpInside" id="zph-y8-ZTa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
