@@ -153,6 +153,7 @@
                                                 <rect key="frame" x="197" y="0.0" width="197" height="30"/>
                                                 <state key="normal" title="No"/>
                                                 <connections>
+                                                    <action selector="marriedButtonPressed:" destination="HEO-vf-qcG" eventType="touchUpInside" id="rZy-Rl-jYC"/>
                                                     <action selector="married_button:" destination="2kU-ap-zdH" eventType="touchUpInside" id="jQb-tc-QGY"/>
                                                 </connections>
                                             </button>
@@ -176,6 +177,7 @@
                                                 </constraints>
                                                 <state key="normal" title="No"/>
                                                 <connections>
+                                                    <action selector="kidsButtonPressed:" destination="HEO-vf-qcG" eventType="touchUpInside" id="sj6-F0-zQU"/>
                                                     <action selector="kids_button:" destination="2kU-ap-zdH" eventType="touchUpInside" id="SDz-jC-H7Z"/>
                                                 </connections>
                                             </button>
@@ -195,6 +197,7 @@
                                                 <rect key="frame" x="197" y="0.0" width="197" height="30"/>
                                                 <state key="normal" title="No"/>
                                                 <connections>
+                                                    <action selector="petsButtonPressed:" destination="HEO-vf-qcG" eventType="touchUpInside" id="zCB-Wo-rEJ"/>
                                                     <action selector="pets_button:" destination="2kU-ap-zdH" eventType="touchUpInside" id="qTQ-CG-UAn"/>
                                                 </connections>
                                             </button>
@@ -234,8 +237,14 @@
                     <connections>
                         <outlet property="contactPreferenceButton" destination="Fm8-0H-zh7" id="EF0-Bb-k1f"/>
                         <outlet property="contactPreferencePicker" destination="TZ1-g2-fju" id="3Ma-IF-5ft"/>
+                        <outlet property="emailTextField" destination="wMC-NZ-yL6" id="jPk-zw-AWo"/>
+                        <outlet property="kidsButton" destination="Pxj-my-ySU" id="Dfq-RR-KDk"/>
+                        <outlet property="marriedButton" destination="w9B-aw-3ab" id="pAs-vT-yjA"/>
                         <outlet property="militaryServiceButton" destination="3lR-AW-0XY" id="aj0-7e-K0c"/>
                         <outlet property="militaryServicePicker" destination="EyC-sm-Oo9" id="3Sr-eo-szS"/>
+                        <outlet property="nameTextField" destination="z6i-Nh-NJC" id="5Gh-WZ-s1V"/>
+                        <outlet property="petsButton" destination="XcA-vH-6am" id="8ZP-Zr-jBQ"/>
+                        <outlet property="phoneTextField" destination="3Q6-gK-KWn" id="9TF-Cn-tsP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m8j-dX-EMh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -11,14 +11,20 @@ import UIKit
 class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // Outlets
+    @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var militaryServicePicker: UIPickerView!
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var contactPreferencePicker: UIPickerView!
     @IBOutlet weak var militaryServiceButton: UIButton!
     @IBOutlet weak var contactPreferenceButton: UIButton!
+    @IBOutlet weak var marriedButton: UIButton!
+    @IBOutlet weak var kidsButton: UIButton!
+    @IBOutlet weak var petsButton: UIButton!
     
     // Variables
-    let militaryBranch : [String] = ["Army", "Navy", "Air Force", "Marines", "Coast Guard"]
-    let communicationPreference : [String] = ["Texting", "Email", "Phone"]
+    let militaryBranch : [String] = ["", "Army", "Navy", "Air Force", "Marines", "Coast Guard"]
+    let communicationPreference : [String] = ["", "Texting", "Email", "Phone"]
     var branch : String = ""
     var commPref : String = ""
 
@@ -89,6 +95,31 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBAction func communicationPreferencePressed(_ sender: Any) {
         contactPreferencePicker.isHidden = false
     }
+    
+    @IBAction func marriedButtonPressed(_ sender: Any) {
+        if marriedButton.titleLabel?.text == "No" {
+            marriedButton.setTitle("Yes", for: .normal)
+        } else {
+            marriedButton.setTitle("No", for: .normal)
+        }
+    }
+    
+    @IBAction func kidsButtonPressed(_ sender: Any) {
+        if kidsButton.titleLabel?.text == "No" {
+            kidsButton.setTitle("Yes", for: .normal)
+        } else {
+            kidsButton.setTitle("No", for: .normal)
+        }
+    }
+    
+    @IBAction func petsButtonPressed(_ sender: Any) {
+        if petsButton.titleLabel?.text == "No" {
+            petsButton.setTitle("Yes", for: .normal)
+        } else {
+            petsButton.setTitle("No", for: .normal)
+        }
+    }
+    
     
     /*
     // MARK: - Navigation
