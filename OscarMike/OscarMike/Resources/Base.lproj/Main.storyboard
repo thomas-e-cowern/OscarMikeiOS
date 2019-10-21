@@ -425,11 +425,11 @@
             <objects>
                 <viewController id="96H-xc-eHK" customClass="HomeInfoViewController" customModule="O_M__On_The_Move_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="52y-7I-MA9">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="1446"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1696"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="UFR-dz-VXw">
-                                <rect key="frame" x="10" y="26" width="394" height="1394.5"/>
+                                <rect key="frame" x="10" y="28" width="394" height="1640.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Let us know about your home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="acy-Yd-0te">
                                         <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
@@ -437,8 +437,35 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wqh-IC-nwH">
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="hw6-Yt-7Mp">
                                         <rect key="frame" x="0.0" y="20.5" width="394" height="246"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="d2e-Uc-Ung">
+                                                <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Buy or Rent" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y9p-xn-s2N">
+                                                        <rect key="frame" x="0.0" y="0.0" width="197" height="30"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xk6-a8-0BK">
+                                                        <rect key="frame" x="197" y="0.0" width="197" height="30"/>
+                                                        <state key="normal" title="Click to Select"/>
+                                                        <connections>
+                                                            <action selector="but_rent_button_pressed:" destination="2kU-ap-zdH" eventType="touchUpInside" id="MLI-w6-ATX"/>
+                                                            <action selector="buyRentButtonPressed:" destination="96H-xc-eHK" eventType="touchUpInside" id="aX3-a2-0co"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nbh-kf-urn">
+                                                <rect key="frame" x="0.0" y="30" width="394" height="216"/>
+                                            </pickerView>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wqh-IC-nwH">
+                                        <rect key="frame" x="0.0" y="266.5" width="394" height="246"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="vxT-Nh-04i">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
@@ -472,7 +499,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="XLZ-KJ-Bs4">
-                                        <rect key="frame" x="0.0" y="266.5" width="394" height="246"/>
+                                        <rect key="frame" x="0.0" y="512.5" width="394" height="246"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tOM-W1-aju">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
@@ -507,7 +534,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="czi-n9-hjd">
-                                        <rect key="frame" x="0.0" y="512.5" width="394" height="34"/>
+                                        <rect key="frame" x="0.0" y="758.5" width="394" height="34"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Square Ft Preference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAY-L1-LBZ">
                                                 <rect key="frame" x="0.0" y="0.0" width="197" height="34"/>
@@ -523,7 +550,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9Cw-rr-9AH">
-                                        <rect key="frame" x="0.0" y="546.5" width="394" height="246"/>
+                                        <rect key="frame" x="0.0" y="792.5" width="394" height="246"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="6VL-KL-p8f">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
@@ -558,7 +585,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Eeo-HS-oKp">
-                                        <rect key="frame" x="0.0" y="792.5" width="394" height="246"/>
+                                        <rect key="frame" x="0.0" y="1038.5" width="394" height="246"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Of-4x-ixS">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
@@ -593,7 +620,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="3Xi-Q8-lb1">
-                                        <rect key="frame" x="0.0" y="1038.5" width="394" height="246"/>
+                                        <rect key="frame" x="0.0" y="1284.5" width="394" height="246"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="QhQ-Ca-hQ7">
                                                 <rect key="frame" x="0.0" y="0.0" width="394" height="30"/>
@@ -628,7 +655,7 @@
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kcM-gU-gGx">
-                                        <rect key="frame" x="0.0" y="1284.5" width="394" height="30"/>
+                                        <rect key="frame" x="0.0" y="1530.5" width="394" height="30"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="kL0-Qh-Efi">
                                                 <rect key="frame" x="0.0" y="0.0" width="197" height="30"/>
@@ -671,7 +698,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="lxb-MJ-Y7U">
-                                        <rect key="frame" x="0.0" y="1314.5" width="394" height="30"/>
+                                        <rect key="frame" x="0.0" y="1560.5" width="394" height="30"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="BAb-5Z-slY">
                                                 <rect key="frame" x="0.0" y="0.0" width="197" height="30"/>
@@ -714,12 +741,13 @@
                                         </subviews>
                                     </stackView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GMX-Gv-q6Q">
-                                        <rect key="frame" x="0.0" y="1344.5" width="394" height="50"/>
+                                        <rect key="frame" x="0.0" y="1590.5" width="394" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="qBA-f9-F1N"/>
                                         </constraints>
                                         <state key="normal" title="Save and Continue"/>
                                         <connections>
+                                            <action selector="savrButtonPressed:" destination="96H-xc-eHK" eventType="touchUpInside" id="gg3-ih-cfa"/>
                                             <segue destination="pxm-vz-Y9h" kind="show" id="0ml-N5-74c"/>
                                         </connections>
                                     </button>
@@ -755,12 +783,14 @@
                         <viewLayoutGuide key="safeArea" id="qwf-Qg-dqK"/>
                     </view>
                     <navigationItem key="navigationItem" id="wkU-sB-Z3A"/>
-                    <size key="freeformSize" width="414" height="1500"/>
+                    <size key="freeformSize" width="414" height="1750"/>
                     <connections>
                         <outlet property="bathroomsButton" destination="oZO-R7-WSt" id="1Ez-Gt-bD4"/>
                         <outlet property="bathroomsPicker" destination="Iio-VE-fRv" id="rbt-V1-f4B"/>
                         <outlet property="bedroomsButton" destination="Uhe-Od-PUT" id="ddN-Ip-rBo"/>
                         <outlet property="bedroomsPicker" destination="onf-fQ-0ds" id="Bfc-Ob-65l"/>
+                        <outlet property="buyRentButton" destination="xk6-a8-0BK" id="duC-k8-EWh"/>
+                        <outlet property="buyRentPicker" destination="Nbh-kf-urn" id="NFA-3T-hBZ"/>
                         <outlet property="flooringPreferenceButton" destination="WKU-0x-9Db" id="7Yq-6Y-5SR"/>
                         <outlet property="flooringPreferencePicker" destination="gvV-pp-9Bq" id="4oH-8I-rmz"/>
                         <outlet property="garageButton" destination="ni9-Xa-RF2" id="es4-Vh-7Dh"/>

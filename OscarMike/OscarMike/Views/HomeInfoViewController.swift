@@ -11,6 +11,8 @@ import UIKit
 class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // Outlets
+    @IBOutlet weak var buyRentButton: UIButton!
+    @IBOutlet weak var buyRentPicker: UIPickerView!
     @IBOutlet weak var housingTypeButton: UIButton!
     @IBOutlet weak var housingTypePicker: UIPickerView!
     @IBOutlet weak var housingLocationButton: UIButton!
@@ -68,6 +70,10 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     // Actions
+    @IBAction func buyRentButtonPressed(_ sender: Any) {
+        buyRentPicker.isHidden = false
+    }
+    
     @IBAction func housingTypeButtonPressed(_ sender: Any) {
         housingTypePicker.isHidden = false
     }
@@ -90,7 +96,6 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     @IBAction func garageButtonPressed(_ sender: Any) {
         guard let status = garageButton.titleLabel?.text else { return }
-        
            if status == "No" {
                garageButton.setTitle("Yes", for: .normal)
            } else {
@@ -99,17 +104,41 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     }
     
     @IBAction func yardFenceButtonPressed(_ sender: Any) {
+        guard let status = yardFenceButton.titleLabel?.text else { return }
+           if status == "No" {
+               yardFenceButton.setTitle("Yes", for: .normal)
+           } else {
+               yardFenceButton.setTitle("No", for: .normal)
+           }
     }
     
     @IBAction func poolButtonPressed(_ sender: Any) {
+        guard let status = poolButton.titleLabel?.text else { return }
+           if status == "No" {
+               poolButton.setTitle("Yes", for: .normal)
+           } else {
+               poolButton.setTitle("No", for: .normal)
+           }
     }
     
     @IBAction func interiorPrefButtonPressed(_ sender: Any) {
+        guard let status = interiorButton.titleLabel?.text else { return }
+           if status == "No" {
+               interiorButton.setTitle("Yes", for: .normal)
+           } else {
+               interiorButton.setTitle("No", for: .normal)
+           }
+    }
+    
+    @IBAction func savrButtonPressed(_ sender: Any) {
+       
     }
     
     // Pickerview
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         switch pickerView {
+        case buyRentPicker:
+            return 1
         case housingTypePicker:
             return 1
         case housingLocationPicker:
@@ -128,6 +157,8 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         switch pickerView {
+        case buyRentPicker:
+            return buy_rent_data.count
         case housingTypePicker:
             return house_type_data.count
         case housingLocationPicker:
@@ -146,6 +177,8 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         switch pickerView {
+        case buyRentPicker:
+            return buy_rent_data[row]
         case housingTypePicker:
             return house_type_data[row]
         case housingLocationPicker:
@@ -170,6 +203,9 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         
         // Get the value, set button title, and hide the picker
         switch pickerView {
+        case buyRentPicker:
+            buy_rent_value = buy_rent_data[row]
+            buyRentButton.setTitle(buy_rent_value, for: .normal)
         case housingTypePicker:
             house_type_value = house_type_data[row]
             housingTypeButton.setTitle(house_type_value, for: .normal)
@@ -194,19 +230,5 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
             break
         }
         
-        
     }
-    
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
