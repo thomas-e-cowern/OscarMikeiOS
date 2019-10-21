@@ -11,12 +11,13 @@ import MessageUI
 
 class FinancialInfoViewController: UIViewController {
     
-
+    var data: [String] = [""]
 
     @IBAction func emailButtonPressed(_ sender: Any) {
         print("emailButtonPressed")
-        guard let name = defaults.string(forKey: Referral.name) else { return }
-        composeEmail(name: name)
+        data = getData()
+        print(data)
+        composeEmail()
     }
     
     func showMailError() {
@@ -27,7 +28,7 @@ class FinancialInfoViewController: UIViewController {
     }
     
     
-    func composeEmail (name: String) {
+    func composeEmail () {
         guard MFMailComposeViewController.canSendMail() else {
             print("Error in composeEmail")
             showMailError()
@@ -40,7 +41,7 @@ class FinancialInfoViewController: UIViewController {
         composer.mailComposeDelegate = self
         composer.setToRecipients(["thomas.e.cowern@gmail.com"])
         composer.setSubject("A New Request")
-        composer.setMessageBody("Name: \(name)", isHTML: false)
+        composer.setMessageBody("Name: \(data[0]) \n Phone: \(data[1]) \n Email: \(data[2]) \n Service: \(data[3]) \n Assistance requested: \(data[4]) \n Location: \(data[5]) \n Base: \(data[6])", isHTML: false)
         
         present(composer, animated: true)
     }

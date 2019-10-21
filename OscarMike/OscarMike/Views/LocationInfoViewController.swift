@@ -8,17 +8,31 @@
 
 import UIKit
 
-class LocationInfoViewController: UIViewController {
+class LocationInfoViewController: UIViewController, UITextFieldDelegate {
     
     // Outlets
     @IBOutlet weak var findSellRealtorLabel: UILabel!
+    @IBOutlet weak var locationTextfield: UITextField!
+    @IBOutlet weak var baseTextField: UITextField!
     
     // Variables
     var findSellRealtor : String = "Test"
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        locationTextfield.delegate = self
+        baseTextField.delegate = self
         updateInfo()
+    }
+    
+    // For pressing return on the keyboard to dismiss keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
     
     // Methods
@@ -27,14 +41,13 @@ class LocationInfoViewController: UIViewController {
         findSellRealtorLabel.text = findSellRealtor
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // Actions
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        guard let location = locationTextfield.text,
+              let base = baseTextField.text else { return }
+        
+        saveInfo(userKey: Referral.location, userValue: location)
+        saveInfo(userKey: Referral.base, userValue: base)
     }
-    */
-
+    
 }

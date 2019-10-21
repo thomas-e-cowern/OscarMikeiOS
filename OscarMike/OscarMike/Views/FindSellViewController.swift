@@ -38,6 +38,8 @@ class FindSellViewController: UIViewController {
                    buySellRealtor = "Error in choosing option"
                }
         
+        saveInfo(userKey: Referral.buySellFind, userValue: buySellRealtor)
+        
         performSegue(withIdentifier: "locationSegue", sender: self)
     }
     

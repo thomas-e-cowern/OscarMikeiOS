@@ -14,3 +14,14 @@ func saveInfo (userKey: String, userValue: String) {
     defaults.set(userValue, forKey: userKey)
 }
 
+func getData () -> [String] {
+    guard let name = defaults.string(forKey: "Name"),
+    let phone = defaults.string(forKey: "Phone"),
+    let email = defaults.string(forKey: "Email"),
+    let service = defaults.string(forKey: "Service"),
+    let request = defaults.string(forKey: "Request"),
+    let location =  defaults.string(forKey: "Location"),
+    let base = defaults.string(forKey: "Base") else { return ["Error in getData"] }
+    
+    return [name, phone, email, service, request, location, base]
+}
