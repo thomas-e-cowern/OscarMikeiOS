@@ -6,6 +6,7 @@
 //  Copyright © 2019 Thomas Cowern New. All rights reserved.
 //
 
+import Foundation
 import UIKit
 
 class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
@@ -27,7 +28,7 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
     let communicationPreference : [String] = ["", "Texting", "Email", "Phone"]
     var branch : String = ""
     var commPref : String = ""
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,6 +40,21 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
         militaryServicePicker.isHidden = true
         contactPreferencePicker.isHidden = true
         
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
+        
+    }
+    
+    // For pressing return on the keyboard to dismiss keyboard
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        for textField in self.view.subviews where textField is UITextField {
+            textField.resignFirstResponder()
+        }
+        return true
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -118,6 +134,21 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
         } else {
             petsButton.setTitle("No", for: .normal)
         }
+    }
+    
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        
+        guard let name = nameTextField.text else {return}
+        guard let phone = phoneTextField.text else {return}
+        guard let email = emailTextField.text else {return}
+        guard let service = militaryServiceButton.titleLabel?.text else {return}
+        
+        print("name: \(name) \nphone: \(phone) \nemail: \(email) \nservice: \(service)")
+        
+        saveInfo(userKey: Referral.name, userValue: name)
+        saveInfo(userKey: Referral.phone, userValue: phone)
+        saveInfo(userKey: Referral.email, userValue: email)
+        saveInfo(userKey: Referral.service, userValue: service)
     }
     
     

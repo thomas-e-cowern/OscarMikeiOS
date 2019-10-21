@@ -211,6 +211,7 @@
                                         </constraints>
                                         <state key="normal" title="Save and Continue"/>
                                         <connections>
+                                            <action selector="saveButtonPressed:" destination="HEO-vf-qcG" eventType="touchUpInside" id="0wD-kj-Hq0"/>
                                             <segue destination="VXq-cX-YE2" kind="show" id="DIP-oZ-Wqv"/>
                                         </connections>
                                     </button>

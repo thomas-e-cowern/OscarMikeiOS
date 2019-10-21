@@ -10,16 +10,27 @@ import UIKit
 import MessageUI
 
 class FinancialInfoViewController: UIViewController {
+    
 
 
     @IBAction func emailButtonPressed(_ sender: Any) {
         print("emailButtonPressed")
-        composeEmail()
+        guard let name = defaults.string(forKey: Referral.name) else { return }
+        composeEmail(name: name)
     }
     
-    func composeEmail () {
+    func showMailError() {
+        let sendMailErrorAlert = UIAlertController(title: "Could not send email", message: "Your device could not send email", preferredStyle: .alert)
+        let dismiss = UIAlertAction(title: "Ok", style: .default, handler: nil)
+        sendMailErrorAlert.addAction(dismiss)
+        self.present(sendMailErrorAlert, animated: true, completion: nil)
+    }
+    
+    
+    func composeEmail (name: String) {
         guard MFMailComposeViewController.canSendMail() else {
             print("Error in composeEmail")
+            showMailError()
             return
         }
         
@@ -29,7 +40,9 @@ class FinancialInfoViewController: UIViewController {
         composer.mailComposeDelegate = self
         composer.setToRecipients(["thomas.e.cowern@gmail.com"])
         composer.setSubject("A New Request")
-        composer.setMessageBody("Name: ", isHTML: false)
+        composer.setMessageBody("Name: \(name)", isHTML: false)
+        
+        present(composer, animated: true)
     }
 }
 

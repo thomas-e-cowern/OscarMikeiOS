@@ -8,32 +8,18 @@
 
 import UIKit
 
-class Referral {
+struct Referral {
     
     // Properties
-    var name : String
-    var service : String
-    var phone : String
-    var email : String
-    var contactPreference: String
-    var married : Bool
-    var kids : Bool
-    var pets : Bool
-    var location: String
-    var base : String
-    
-    init(name: String, service: String, phone: String, email: String, contactPreference: String, married: Bool, kids : Bool, pets : Bool, location: String, base : String) {
-        self.name = name
-        self.service = service
-        self.phone = phone
-        self.email = email
-        self .contactPreference = contactPreference
-        self.married = married
-        self.kids = kids
-        self.pets = pets
-        self.location = location
-        self.base = base
-    }
-    
-    
+    static let name = "Name"
+    static let service = "Service"
+    static let phone = "Phone"
+    static let email = "Email"
+    static let contactPreference = "Contact Preference"
+    static let married = "Married"
+    static let kids = "Kids"
+    static let pets = "Pets"
+    static let location = "Location"
+    static let base = "Base"
+
 }
