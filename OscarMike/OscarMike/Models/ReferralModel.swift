@@ -15,6 +15,7 @@ struct Referral {
     static let service = "Service"
     static let phone = "Phone"
     static let email = "Email"
+    static let buySellFind = "Request"
     static let contactPreference = "Contact Preference"
     static let married = "Married"
     static let kids = "Kids"

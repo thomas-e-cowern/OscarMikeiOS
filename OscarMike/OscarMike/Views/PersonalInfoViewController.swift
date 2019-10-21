@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     // Outlets
     @IBOutlet weak var nameTextField: UITextField!
@@ -35,21 +35,23 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
         // Delegates
         militaryServicePicker.delegate = self
         contactPreferencePicker.delegate = self
+        nameTextField.delegate = self
+        phoneTextField.delegate = self
+        emailTextField.delegate = self
         
         // Pickerview Setup
         militaryServicePicker.isHidden = true
         contactPreferencePicker.isHidden = true
         
+        // Set up tapping on screen hides keyboard
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tapGesture)
         
     }
     
     // For pressing return on the keyboard to dismiss keyboard
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        for textField in self.view.subviews where textField is UITextField {
-            textField.resignFirstResponder()
-        }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
         return true
     }
     
@@ -57,6 +59,8 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
         view.endEditing(true)
     }
     
+    
+    // Pickerview
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         switch pickerView {
         default:
@@ -150,16 +154,4 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
         saveInfo(userKey: Referral.email, userValue: email)
         saveInfo(userKey: Referral.service, userValue: service)
     }
-    
-    
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

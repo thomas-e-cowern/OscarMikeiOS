@@ -388,6 +388,7 @@
                                                 </constraints>
                                                 <state key="normal" title="Save and Continue"/>
                                                 <connections>
+                                                    <action selector="saveButtonPressed:" destination="cGi-uS-P0X" eventType="touchUpInside" id="ko2-BY-dO5"/>
                                                     <segue destination="96H-xc-eHK" kind="show" id="v5o-yb-Ktn"/>
                                                 </connections>
                                             </button>
@@ -410,7 +411,9 @@
                     </view>
                     <navigationItem key="navigationItem" id="iZq-jv-WRl"/>
                     <connections>
+                        <outlet property="baseTextField" destination="KUo-cL-UhW" id="9I7-QZ-C0B"/>
                         <outlet property="findSellRealtorLabel" destination="m5h-yS-X1e" id="ErS-S6-exI"/>
+                        <outlet property="locationTextfield" destination="aR4-RW-8ex" id="puC-vW-L0U"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PfY-r2-Sjc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
