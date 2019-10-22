@@ -24,8 +24,27 @@ func getData () -> [String] {
     let base = defaults.string(forKey: "Base"),
     let married = defaults.string(forKey: "Married"),
     let kids = defaults.string(forKey: "Kids"),
-    let pets = defaults.string(forKey: "Pets")
+    let pets = defaults.string(forKey: "Pets"),
+    let buyRent = defaults.string(forKey: "Buy or Rent"),
+    let housingType = defaults.string(forKey: "Housing Type"),
+    let locationType = defaults.string(forKey: "Location Type"),
+    let sqFeet = defaults.string(forKey: "Square Feet"),
+    let bedrooms = defaults.string(forKey: "Bedrooms"),
+    let bathrooms = defaults.string(forKey: "Bathrooms"),
+    let flooring = defaults.string(forKey: "Flooring"),
+    let garage = defaults.string(forKey: "Garage"),
+    let pool = defaults.string(forKey: "Pool"),
+        let yard = defaults.string(forKey: "Yard/Fence"),
+        let interior = defaults.string(forKey: "Interior"),
+        let purchasePrice = defaults.string(forKey: "Max Purchase Price"),
+        let payment = defaults.string(forKey: "Desired Payment"),
+        let downPayment = defaults.string(forKey: "Down Payment"),
+        let loanType = defaults.string(forKey: "Loan Type"),
+        let preApproved = defaults.string(forKey: "Pre-approved"),
+        let bank = defaults.string(forKey: "Preffered Bank"),
+        let firstTimeBuyer = defaults.string(forKey: "First Time Home Buyer"),
+        let ownProperty = defaults.string(forKey: "Own Other Property")
     else { return ["Error in getData"] }
     
-    return [name, phone, email, service, request, location, base, married, kids, pets]
+    return [name, phone, email, service, request, location, base, married, kids, pets, buyRent, housingType, locationType, sqFeet, bedrooms, bathrooms, flooring, garage, pool, yard, interior, purchasePrice, payment, downPayment, loanType, preApproved, bank, firstTimeBuyer, ownProperty]
 }
