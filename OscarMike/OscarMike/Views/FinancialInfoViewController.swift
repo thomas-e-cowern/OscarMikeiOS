@@ -12,11 +12,14 @@ import MessageUI
 class FinancialInfoViewController: UIViewController {
     
     var data: [String] = [""]
+    var formattedMessage : String = ""
 
     @IBAction func emailButtonPressed(_ sender: Any) {
         print("emailButtonPressed")
         data = getData()
         print(data)
+        formattedMessage = "Name: \(data[0]) \n Phone: \(data[1]) \n Email: \(data[2]) \n Service: \(data[3]) \n Assistance requested: \(data[4]) \n Location: \(data[5]) \n Base: \(data[6]) \n Married: \(data[7]) \n Kids: \(data[8]) \n Pets: \(data[9])"
+        print(formattedMessage)
         composeEmail()
     }
     
@@ -41,7 +44,7 @@ class FinancialInfoViewController: UIViewController {
         composer.mailComposeDelegate = self
         composer.setToRecipients(["thomas.e.cowern@gmail.com"])
         composer.setSubject("A New Request")
-        composer.setMessageBody("Name: \(data[0]) \n Phone: \(data[1]) \n Email: \(data[2]) \n Service: \(data[3]) \n Assistance requested: \(data[4]) \n Location: \(data[5]) \n Base: \(data[6])", isHTML: false)
+        composer.setMessageBody(formattedMessage, isHTML: false)
         
         present(composer, animated: true)
     }
