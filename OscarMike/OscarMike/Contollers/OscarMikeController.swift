@@ -21,7 +21,11 @@ func getData () -> [String] {
     let service = defaults.string(forKey: "Service"),
     let request = defaults.string(forKey: "Request"),
     let location =  defaults.string(forKey: "Location"),
-    let base = defaults.string(forKey: "Base") else { return ["Error in getData"] }
+    let base = defaults.string(forKey: "Base"),
+    let married = defaults.string(forKey: "Married"),
+    let kids = defaults.string(forKey: "Kids"),
+    let pets = defaults.string(forKey: "Pets")
+    else { return ["Error in getData"] }
     
-    return [name, phone, email, service, request, location, base]
+    return [name, phone, email, service, request, location, base, married, kids, pets]
 }

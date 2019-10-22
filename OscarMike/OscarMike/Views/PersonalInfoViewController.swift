@@ -146,6 +146,10 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
         guard let phone = phoneTextField.text else {return}
         guard let email = emailTextField.text else {return}
         guard let service = militaryServiceButton.titleLabel?.text else {return}
+        guard let preference = contactPreferenceButton.titleLabel?.text else {return}
+        guard let married = marriedButton.titleLabel?.text else { return }
+        guard let kids = kidsButton.titleLabel?.text else { return }
+        guard let pets = petsButton.titleLabel?.text else { return }
         
         print("name: \(name) \nphone: \(phone) \nemail: \(email) \nservice: \(service)")
         
@@ -153,5 +157,9 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
         saveInfo(userKey: Referral.phone, userValue: phone)
         saveInfo(userKey: Referral.email, userValue: email)
         saveInfo(userKey: Referral.service, userValue: service)
+        saveInfo(userKey: Referral.contactPreference, userValue: preference)
+        saveInfo(userKey: Referral.married, userValue: married)
+        saveInfo(userKey: Referral.kids, userValue: kids)
+        saveInfo(userKey: Referral.pets, userValue: pets)
     }
 }
