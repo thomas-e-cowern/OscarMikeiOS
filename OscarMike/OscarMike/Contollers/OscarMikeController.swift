@@ -20,6 +20,7 @@ func getData () -> [String] {
     let email = defaults.string(forKey: "Email"),
     let service = defaults.string(forKey: "Service"),
     let request = defaults.string(forKey: "Request"),
+    let contactPreferrence = defaults.string(forKey: "Contact Preference"),
     let location =  defaults.string(forKey: "Location"),
     let base = defaults.string(forKey: "Base"),
     let married = defaults.string(forKey: "Married"),
@@ -34,17 +35,17 @@ func getData () -> [String] {
     let flooring = defaults.string(forKey: "Flooring"),
     let garage = defaults.string(forKey: "Garage"),
     let pool = defaults.string(forKey: "Pool"),
-        let yard = defaults.string(forKey: "Yard/Fence"),
-        let interior = defaults.string(forKey: "Interior"),
-        let purchasePrice = defaults.string(forKey: "Max Purchase Price"),
-        let payment = defaults.string(forKey: "Desired Payment"),
-        let downPayment = defaults.string(forKey: "Down Payment"),
-        let loanType = defaults.string(forKey: "Loan Type"),
-        let preApproved = defaults.string(forKey: "Pre-approved"),
-        let bank = defaults.string(forKey: "Preffered Bank"),
-        let firstTimeBuyer = defaults.string(forKey: "First Time Home Buyer"),
-        let ownProperty = defaults.string(forKey: "Own Other Property")
+    let yard = defaults.string(forKey: "Yard/Fence"),
+    let interior = defaults.string(forKey: "Interior"),
+    let purchasePrice = defaults.string(forKey: "Max Purchase Price"),
+    let payment = defaults.string(forKey: "Desired Payment"),
+    let downPayment = defaults.string(forKey: "Down Payment"),
+    let loanType = defaults.string(forKey: "Loan Type"),
+    let preApproved = defaults.string(forKey: "Pre-approved"),
+    let bank = defaults.string(forKey: "Preffered Bank"),
+    let firstTimeBuyer = defaults.string(forKey: "First Time Home Buyer"),
+    let ownProperty = defaults.string(forKey: "Own Other Property")
     else { return ["Error in getData"] }
     
-    return [name, phone, email, service, request, location, base, married, kids, pets, buyRent, housingType, locationType, sqFeet, bedrooms, bathrooms, flooring, garage, pool, yard, interior, purchasePrice, payment, downPayment, loanType, preApproved, bank, firstTimeBuyer, ownProperty]
+    return [name, phone, email, service, request, contactPreferrence, location, base, married, kids, pets, buyRent, housingType, locationType, sqFeet, bedrooms, bathrooms, flooring, garage, pool, yard, interior, purchasePrice, payment, downPayment, loanType, preApproved, bank, firstTimeBuyer, ownProperty]
 }
