@@ -43,6 +43,11 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     var bedrooms_value: Int = 0
     var bathrooms_value: Int = 0
     var flooring_value: String = ""
+    var square_foot_value: String = ""
+    var garage_value: String = ""
+    var pool_value: String = ""
+    var yard_fence_value: String = ""
+    var interior_pref_value: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -148,8 +153,31 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
            }
     }
     
-    @IBAction func savrButtonPressed(_ sender: Any) {
-       
+    @IBAction func saveButtonPressed(_ sender: Any) {
+        
+        guard let buyRentValue = buyRentButton.titleLabel?.text,
+            let houseTypeValue = housingTypeButton.titleLabel?.text,
+            let locationValue = housingLocationButton.titleLabel?.text,
+            let sqFtValue = sqFootTextfield.text,
+            let bedroomsValue = bedroomsButton.titleLabel?.text,
+            let bathroomsValue = bathroomsButton.titleLabel?.text,
+            let flooringValue = flooringPreferenceButton.titleLabel?.text,
+            let garageValue = garageButton.titleLabel?.text,
+            let poolValue = poolButton.titleLabel?.text,
+            let yardFenceValue = yardFenceButton.titleLabel?.text,
+            let interiorValue = interiorButton.titleLabel?.text else { return }
+
+        saveInfo(userKey: "Buy or Rent", userValue: buyRentValue)
+        saveInfo(userKey: "Housing Type", userValue: houseTypeValue)
+        saveInfo(userKey: "Location Type", userValue: locationValue)
+        saveInfo(userKey: "Square Feet", userValue: sqFtValue)
+        saveInfo(userKey: "Bedrooms", userValue: bedroomsValue)
+        saveInfo(userKey: "Bathrooms", userValue: bathroomsValue)
+        saveInfo(userKey: "Flooring", userValue: flooringValue)
+        saveInfo(userKey: "Garage", userValue: garageValue)
+        saveInfo(userKey: "Pool", userValue: poolValue)
+        saveInfo(userKey: "Yard/Fence", userValue: yardFenceValue)
+        saveInfo(userKey: "Interior", userValue: interiorValue)
     }
     
     // Pickerview
@@ -224,6 +252,7 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         case buyRentPicker:
             buy_rent_value = buy_rent_data[row]
             buyRentButton.setTitle(buy_rent_value, for: .normal)
+            buyRentPicker.isHidden = true
         case housingTypePicker:
             house_type_value = house_type_data[row]
             housingTypeButton.setTitle(house_type_value, for: .normal)
@@ -247,6 +276,5 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         default:
             break
         }
-        
     }
 }
