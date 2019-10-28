@@ -9,11 +9,82 @@
 import UIKit
 import MessageUI
 
-class FinancialInfoViewController: UIViewController {
+class FinancialInfoViewController: UIViewController, UITextFieldDelegate {
+    
+    // Outlets
+    @IBOutlet weak var maxPurchasePriceTextfield: UITextField!
+    @IBOutlet weak var desiredPaymentTextfield: UITextField!
+    @IBOutlet weak var downPaymentTextfield: UITextField!
+    @IBOutlet weak var loanTypeButton: UIButton!
+    @IBOutlet weak var preApprovedButton: UIButton!
+    @IBOutlet weak var prefferedBankTextfield: UITextField!
+    @IBOutlet weak var firstTimeBuyerButton: UIButton!
+    @IBOutlet weak var ownPropertyButton: UIButton!
     
     var data: [String] = [""]
     var formattedMessage : String = ""
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // Delegetes
+        maxPurchasePriceTextfield.delegate = self
+        desiredPaymentTextfield.delegate = self
+        downPaymentTextfield.delegate = self
+        prefferedBankTextfield.delegate = self
+        
+        // Set up tapping on screen hides keyboard
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    // For pressing return on the keyboard to dismiss keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
+    }
 
+    // Actions
+    @IBAction func loanTypeButton(_ sender: Any) {
+        guard let loanType = loanTypeButton.titleLabel?.text else { return }
+        if loanType == "No" {
+            loanTypeButton.setTitle("Yes", for: .normal)
+        } else {
+            loanTypeButton.setTitle("No", for: .normal)
+        }
+    }
+    
+    @IBAction func preApprovedButton(_ sender: Any) {
+        guard let preApproved = preApprovedButton.titleLabel?.text else { return }
+        if preApproved == "No" {
+            preApprovedButton.setTitle("Yes", for: .normal)
+        } else {
+            preApprovedButton.setTitle("No", for: .normal)
+        }
+    }
+    
+    @IBAction func firstTimeButton(_ sender: Any) {
+        guard let firstTime = firstTimeBuyerButton.titleLabel?.text else { return }
+        if firstTime == "No" {
+            firstTimeBuyerButton.setTitle("Yes", for: .normal)
+        } else {
+            firstTimeBuyerButton.setTitle("No", for: .normal)
+        }
+    }
+    
+    @IBAction func ownPropertyButton(_ sender: Any) {
+        guard let otherProperty = ownPropertyButton.titleLabel?.text else { return }
+        if otherProperty == "No" {
+            ownPropertyButton.setTitle("Yes", for: .normal)
+        } else {
+            ownPropertyButton.setTitle("No", for: .normal)
+        }
+    }
+    
     @IBAction func emailButtonPressed(_ sender: Any) {
         print("emailButtonPressed")
         data = getData()

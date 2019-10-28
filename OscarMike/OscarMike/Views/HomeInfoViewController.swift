@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate {
     
     // Outlets
     @IBOutlet weak var buyRentButton: UIButton!
@@ -17,6 +17,7 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
     @IBOutlet weak var housingTypePicker: UIPickerView!
     @IBOutlet weak var housingLocationButton: UIButton!
     @IBOutlet weak var housingLocationPicker: UIPickerView!
+    @IBOutlet weak var sqFootTextfield: UITextField!
     @IBOutlet weak var bedroomsButton: UIButton!
     @IBOutlet weak var bedroomsPicker: UIPickerView!
     @IBOutlet weak var bathroomsButton: UIButton!
@@ -47,11 +48,13 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         super.viewDidLoad()
         
         // Delegate
+        buyRentPicker.delegate = self
         housingTypePicker.delegate = self
         housingLocationPicker.delegate = self
         bedroomsPicker.delegate = self
         bathroomsPicker.delegate = self
         flooringPreferencePicker.delegate = self
+        sqFootTextfield.delegate = self
 
         // Data
         buy_rent_data = ["", "Buy", "Rent", "Buy or Rent"]
@@ -62,11 +65,26 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         flooring_data = ["", "Carpet", "Tile", "Wood", "Linoleum"]
         
         // Picker set up
+        buyRentPicker.isHidden = true
         housingTypePicker.isHidden = true
         housingLocationPicker.isHidden = true
         bedroomsPicker.isHidden = true
         bathroomsPicker.isHidden = true
         flooringPreferencePicker.isHidden = true
+        
+        // Set up tapping on screen hides keyboard
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    // For pressing return on the keyboard to dismiss keyboard
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    @objc func hideKeyboard() {
+        view.endEditing(true)
     }
     
     // Actions
