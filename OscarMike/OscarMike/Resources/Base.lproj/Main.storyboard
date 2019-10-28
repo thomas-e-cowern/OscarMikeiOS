@@ -787,6 +787,7 @@
                         <outlet property="housingTypePicker" destination="pxS-HE-pvV" id="i6c-Bv-vt0"/>
                         <outlet property="interiorButton" destination="XIj-1j-dTW" id="EXf-Hr-5Df"/>
                         <outlet property="poolButton" destination="gja-PK-6Qx" id="E80-BS-tNa"/>
+                        <outlet property="sqFootTextfield" destination="gC8-OT-fhb" id="dg6-Mf-d7B"/>
                         <outlet property="yardFenceButton" destination="UlK-de-4P8" id="swp-T0-npQ"/>
                     </connections>
                 </viewController>
@@ -877,6 +878,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7N9-5e-yyX">
                                                         <rect key="frame" x="197" y="0.0" width="197" height="50"/>
                                                         <state key="normal" title="VA"/>
+                                                        <connections>
+                                                            <action selector="loanTypeButton:" destination="pxm-vz-Y9h" eventType="touchUpInside" id="Jg1-0h-jEl"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -892,6 +896,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vV5-RY-gon">
                                                         <rect key="frame" x="197" y="0.0" width="197" height="50"/>
                                                         <state key="normal" title="No"/>
+                                                        <connections>
+                                                            <action selector="preApprovedButton:" destination="pxm-vz-Y9h" eventType="touchUpInside" id="WUG-0z-7CL"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -923,6 +930,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Qb-rs-GOs">
                                                         <rect key="frame" x="197" y="0.0" width="197" height="50"/>
                                                         <state key="normal" title="No"/>
+                                                        <connections>
+                                                            <action selector="firstTimeButton:" destination="pxm-vz-Y9h" eventType="touchUpInside" id="Hyu-29-lgp"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -938,6 +948,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jnc-i6-YHD">
                                                         <rect key="frame" x="197" y="0.0" width="197" height="50"/>
                                                         <state key="normal" title="No"/>
+                                                        <connections>
+                                                            <action selector="ownPropertyButton:" destination="pxm-vz-Y9h" eventType="touchUpInside" id="vET-kI-ziO"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                             </stackView>
@@ -965,6 +978,16 @@
                         <viewLayoutGuide key="safeArea" id="TPj-HW-kob"/>
                     </view>
                     <navigationItem key="navigationItem" id="w45-ca-pEt"/>
+                    <connections>
+                        <outlet property="desiredPaymentTextfield" destination="aDx-lp-rlY" id="yS8-dY-rNA"/>
+                        <outlet property="downPaymentTextfield" destination="3qi-cd-8Sd" id="CkJ-bB-Dau"/>
+                        <outlet property="firstTimeBuyerButton" destination="9Qb-rs-GOs" id="Wde-hZ-eJB"/>
+                        <outlet property="loanTypeButton" destination="7N9-5e-yyX" id="gl0-5s-lez"/>
+                        <outlet property="maxPurchasePriceTextfield" destination="CoX-rp-P6e" id="kXv-sr-Ot6"/>
+                        <outlet property="ownPropertyButton" destination="jnc-i6-YHD" id="pNA-6U-GQy"/>
+                        <outlet property="preApprovedButton" destination="vV5-RY-gon" id="SWd-zZ-yG8"/>
+                        <outlet property="prefferedBankTextfield" destination="3n6-s1-R3Y" id="XFt-Po-bFJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jcy-8B-zGe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
