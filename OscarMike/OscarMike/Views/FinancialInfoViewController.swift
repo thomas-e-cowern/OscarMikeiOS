@@ -113,7 +113,8 @@ class FinancialInfoViewController: UIViewController, UITextFieldDelegate {
     
     func formatMessage () {
         data = getData()
-        formattedMessage = "Name: \(data[0]) \n Phone: \(data[1]) \n Email: \(data[2]) \n Service: \(data[3]) \n Assistance requested: \(data[4]) \n Contact Prefference: \(data[5]) \n Location: \(data[6]) \n Base: \(data[7]) \n Married: \(data[8]) \n Kids: \(data[9]) \n Pets: \(data[10]) \n Buy or Rent: \(data[11]) \n Houing Type: \(data[12]) \n Location Type: \(data[13]) \n Sqaure Feet: \(data[14]) \n Bedrooms: \(data[15]) \n Bathrooms: \(data[16]) \n Flooring: \(data[17]) \n Garage: \(data[18]) \n Pool: \(data[19]) \n Yard or Fence: \(data[20]) \n Interior: \(data[21]) \n Max Purchase Price: \(data[22]) \n Desired Payment: \(data[23]) \n Down Payment: \(data[24]) \n Loan Type: \(data[25]) \n Pre-Approved: \(data[26]) \n Preferred Bank: \(data[27]) \n First Time Home Buyer: \(data[28]) \n Own Other Property: \(data[29])"
+        formattedMessage = "Client Info: \n Name: \(data[0]) \n Phone: \(data[1]) \n Email: \(data[2]) \n Service: \(data[3]) \n Assistance requested: \(data[4]) \n Contact Preference: \(data[5]) \n\nHome,Property, Investment preferrences: \n Location: \(data[6]) \n Base: \(data[7]) \n Married: \(data[8]) \n Kids: \(data[9]) \n Pets: \(data[10]) \n Buy or Rent: \(data[11]) \n Houing Type: \(data[12]) \n Location Type: \(data[13]) \n Sqaure Feet: \(data[14]) \n Bedrooms: \(data[15]) \n Bathrooms: \(data[16]) \n Flooring: \(data[17]) \n Garage: \(data[18]) \n Pool: \(data[19]) \n Yard or Fence: \(data[20]) \n Interior: \(data[21]) \n Max Purchase Price: \(data[22]) \n Desired Payment: \(data[23]) \n Down Payment: \(data[24]) \n Loan Type: \(data[25]) \n Pre-Approved: \(data[26]) \n Preferred Bank: \(data[27]) \n First Time Home Buyer: \(data[28]) \n Own Other Property: \(data[29])"
+        print(formattedMessage)
     }
     
     func showMailError() {
@@ -130,13 +131,12 @@ class FinancialInfoViewController: UIViewController, UITextFieldDelegate {
             showMailError()
             return
         }
-        
-        // Test data
-        
+
         let composer = MFMailComposeViewController()
         composer.mailComposeDelegate = self
         composer.setToRecipients(["thomas.e.cowern@gmail.com"])
-        composer.setSubject("A New Referral Request")
+        composer.setBccRecipients(["\(data[2])"])
+        composer.setSubject("A New Referral Request from \(data[0])")
         composer.setMessageBody(formattedMessage, isHTML: false)
         
         present(composer, animated: true)
