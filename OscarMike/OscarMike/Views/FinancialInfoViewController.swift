@@ -9,7 +9,7 @@
 import UIKit
 import MessageUI
 
-class FinancialInfoViewController: UIViewController, UITextFieldDelegate {
+class FinancialInfoViewController: UIViewController, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
     
     // Outlets
     @IBOutlet weak var maxPurchasePriceTextfield: UITextField!
@@ -20,9 +20,13 @@ class FinancialInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var prefferedBankTextfield: UITextField!
     @IBOutlet weak var firstTimeBuyerButton: UIButton!
     @IBOutlet weak var ownPropertyButton: UIButton!
+    @IBOutlet weak var propertyPurposeButton: UIButton!
+    @IBOutlet weak var propertyPurposePicker: UIPickerView!
     
     var data: [String] = [""]
     var formattedMessage : String = ""
+    var propertyPurposeData : [String] = [""]
+    var propertyPurpose : String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +36,11 @@ class FinancialInfoViewController: UIViewController, UITextFieldDelegate {
         desiredPaymentTextfield.delegate = self
         downPaymentTextfield.delegate = self
         prefferedBankTextfield.delegate = self
+        propertyPurposePicker.delegate = self
+        
+        // Set up propertyPurposePicker
+        propertyPurposeData = ["", "Personal Use", "Investment", "Commercial"]
+        propertyPurposePicker.isHidden = true
         
         // Set up tapping on screen hides keyboard
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
@@ -46,6 +55,29 @@ class FinancialInfoViewController: UIViewController, UITextFieldDelegate {
     
     @objc func hideKeyboard() {
         view.endEditing(true)
+    }
+    
+    // propertyPurposePicker
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return propertyPurposeData.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return propertyPurposeData[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, rowHeightForComponent component: Int) -> CGFloat {
+        return 25
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        propertyPurpose = propertyPurposeData[row]
+        propertyPurposeButton.setTitle(propertyPurpose, for: .normal)
+        propertyPurposePicker.isHidden = true
     }
 
     // Actions
@@ -85,6 +117,9 @@ class FinancialInfoViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
+    @IBAction func propertyPurposePressed(_ sender: Any) {
+        propertyPurposePicker.isHidden = false
+    }
     
     
     @IBAction func emailButtonPressed(_ sender: Any) {
@@ -96,7 +131,8 @@ class FinancialInfoViewController: UIViewController, UITextFieldDelegate {
             let preApproved = preApprovedButton.titleLabel?.text,
             let preferredBank = prefferedBankTextfield.text,
             let firstTime = firstTimeBuyerButton.titleLabel?.text,
-            let ownProperty = ownPropertyButton.titleLabel?.text else { return }
+            let ownProperty = ownPropertyButton.titleLabel?.text,
+            let propertyPurpose = propertyPurposeButton.titleLabel?.text else { return }
         
         saveInfo(userKey: "Max Purchase Price", userValue: maxPurchasePrice)
         saveInfo(userKey: "Desired Payment", userValue: desiredPayment)
@@ -106,6 +142,7 @@ class FinancialInfoViewController: UIViewController, UITextFieldDelegate {
         saveInfo(userKey: "Preffered Bank", userValue: preferredBank)
         saveInfo(userKey: "First Time Home Buyer", userValue: firstTime)
         saveInfo(userKey: "Own Other Property", userValue: ownProperty)
+        saveInfo(userKey: "Property Purpose", userValue: propertyPurpose)
         
         formatMessage()
         composeEmail()
@@ -113,7 +150,7 @@ class FinancialInfoViewController: UIViewController, UITextFieldDelegate {
     
     func formatMessage () {
         data = getData()
-        formattedMessage = "Client Info: \n Name: \(data[0]) \n Phone: \(data[1]) \n Email: \(data[2]) \n Service: \(data[3]) \n Assistance requested: \(data[4]) \n Contact Preference: \(data[5]) \n\nHome,Property, Investment preferrences: \n Location: \(data[6]) \n Base: \(data[7]) \n Married: \(data[8]) \n Kids: \(data[9]) \n Pets: \(data[10]) \n Buy or Rent: \(data[11]) \n Houing Type: \(data[12]) \n Location Type: \(data[13]) \n Sqaure Feet: \(data[14]) \n Bedrooms: \(data[15]) \n Bathrooms: \(data[16]) \n Flooring: \(data[17]) \n Garage: \(data[18]) \n Pool: \(data[19]) \n Yard or Fence: \(data[20]) \n Interior: \(data[21]) \n Max Purchase Price: \(data[22]) \n Desired Payment: \(data[23]) \n Down Payment: \(data[24]) \n Loan Type: \(data[25]) \n Pre-Approved: \(data[26]) \n Preferred Bank: \(data[27]) \n First Time Home Buyer: \(data[28]) \n Own Other Property: \(data[29])"
+        formattedMessage = "Client Info: \n Name: \(data[0]) \n Phone: \(data[1]) \n Email: \(data[2]) \n Service: \(data[3]) \n Assistance requested: \(data[4]) \n Contact Preference: \(data[5]) \n Home, Property, Investment preferrences: \n Location: \(data[6]) \n Base: \(data[7]) \n PCS Date: \(data[8]) \n Married: \(data[9]) \n Spouse Name: \(data[10]) \n Spouse Phone: \(data[11]) \n Spouse Email: \(data[12]) \n Kids: \(data[13]) \n Pets: \(data[14]) \n Buy or Rent: \(data[15]) \n Housing Type: \(data[16]) \n Location Type: \(data[17]) \n Square Feet: \(data[18]) \n Bedrooms: \(data[19]) \n Bathrooms: \(data[20]) \n Flooring: \(data[21]) \n Garage: \(data[22]) \n Pool: \(data[23]) \n Yard/Fence: \(data[24]) \n Interior: \(data[25]) \n Max Purchase Price: \(data[26]) \n Desired Payment: \(data[27]) \n Down Payment: \(data[28]) \n Loan Type: \(data[29]) \n Pre-approved: \(data[30]) \n Preferred Bank: \(data[31]) \n First Time Home Buyer: \(data[32]) \n Own Other Property: \(data[33]) \n Property Purpose: \(data[34])"
         print(formattedMessage)
     }
     

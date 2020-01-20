@@ -14,6 +14,7 @@ class LocationInfoViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var findSellRealtorLabel: UILabel!
     @IBOutlet weak var locationTextfield: UITextField!
     @IBOutlet weak var baseTextField: UITextField!
+    @IBOutlet weak var datePicker: UIDatePicker!
     
     // Variables
     var findSellRealtor : String = "Test"
@@ -46,8 +47,21 @@ class LocationInfoViewController: UIViewController, UITextFieldDelegate {
         guard let location = locationTextfield.text,
               let base = baseTextField.text else { return }
         
+        // Formatting date to string
+        
+        var stringDate = ""
+        if ((datePicker?.date) != nil) {
+            let date = datePicker.date
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "MM-dd-yyyy"
+            stringDate = dateFormatter.string(from: date)
+        } else {
+            print("No date selected")
+        }
+        
         saveInfo(userKey: Referral.location, userValue: location)
         saveInfo(userKey: Referral.base, userValue: base)
+        saveInfo(userKey: Referral.pcsDate, userValue: stringDate)
     }
     
 }
