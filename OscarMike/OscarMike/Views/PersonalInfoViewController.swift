@@ -22,6 +22,11 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBOutlet weak var marriedButton: UIButton!
     @IBOutlet weak var kidsButton: UIButton!
     @IBOutlet weak var petsButton: UIButton!
+    @IBOutlet weak var spuseName: UITextField!
+    @IBOutlet weak var spouseEmail: UITextField!
+    @IBOutlet weak var spousePhone: UITextField!
+    @IBOutlet weak var spuseInfoStackview: UIStackView!
+    
     
     // Variables
     let militaryBranch : [String] = ["", "Army", "Navy", "Air Force", "Marines", "Coast Guard"]
@@ -46,6 +51,10 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
         // Set up tapping on screen hides keyboard
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tapGesture)
+        
+        // Set up spouse info fields
+        spuseInfoStackview.isHidden = true
+        
         
     }
     
@@ -119,8 +128,10 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
     @IBAction func marriedButtonPressed(_ sender: Any) {
         if marriedButton.titleLabel?.text == "No" {
             marriedButton.setTitle("Yes", for: .normal)
+            spuseInfoStackview.isHidden = false
         } else {
             marriedButton.setTitle("No", for: .normal)
+            spuseInfoStackview.isHidden = true
         }
     }
     
@@ -150,6 +161,9 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
         guard let married = marriedButton.titleLabel?.text else { return }
         guard let kids = kidsButton.titleLabel?.text else { return }
         guard let pets = petsButton.titleLabel?.text else { return }
+        guard let spouseName = spuseName.text else { return }
+        guard let spouseEmail = spouseEmail.text else { return }
+        guard let spousePhone = spousePhone.text else { return }
         
         print("name: \(name) \nphone: \(phone) \nemail: \(email) \nservice: \(service)")
         
@@ -161,5 +175,8 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
         saveInfo(userKey: Referral.married, userValue: married)
         saveInfo(userKey: Referral.kids, userValue: kids)
         saveInfo(userKey: Referral.pets, userValue: pets)
+        saveInfo(userKey: Referral.spouseName, userValue: spouseName)
+        saveInfo(userKey: Referral.spousePhone, userValue: spousePhone)
+        saveInfo(userKey: Referral.spouseEmail, userValue: spouseEmail)
     }
 }

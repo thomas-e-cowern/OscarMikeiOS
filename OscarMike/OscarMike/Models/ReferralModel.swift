@@ -19,7 +19,11 @@ struct Referral {
     static let contactPreference = "Contact Preference"
     static let location = "Location"
     static let base = "Base"
+    static let pcsDate = "PCS Date"
     static let married = "Married"
+    static let spouseName = "Spouse Name"
+    static let spousePhone = "Spouse Phone"
+    static let spouseEmail = "Spouse Email"
     static let kids = "Kids"
     static let pets = "Pets"
     static let buyRent = "Buy or Rent"
@@ -41,4 +45,5 @@ struct Referral {
     static let bank = "Preffered Bank"
     static let firstTimeBuyer = "First Time Home Buyer"
     static let ownProperty = "Own Other Property"
+    static let propertyPurpose = "Property Purpose"
 }

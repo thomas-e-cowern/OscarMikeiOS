@@ -29,7 +29,7 @@
 		41A81811235DE70F009CC182 /* OscarMikeController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscarMikeController.swift; sourceTree = "<group>"; };
 		41D2CB03234E59C1004FD17D /* HomeInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeInfoViewController.swift; sourceTree = "<group>"; };
 		41FE00C2234F8A210050DD86 /* FinancialInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinancialInfoViewController.swift; sourceTree = "<group>"; };
-		41FE1AFD232FBB7900B94E97 /* O-M (On The Move).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "O-M (On The Move).app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		41FE1AFD232FBB7900B94E97 /* O-M Referrals.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "O-M Referrals.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		41FE1B00232FBB7900B94E97 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		41FE1B05232FBB7900B94E97 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		41FE1B08232FBB7900B94E97 /* OscarMike.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OscarMike.xcdatamodel; sourceTree = "<group>"; };
@@ -60,7 +60,7 @@
 		41FE1AFE232FBB7900B94E97 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				41FE1AFD232FBB7900B94E97 /* O-M (On The Move).app */,
+				41FE1AFD232FBB7900B94E97 /* O-M Referrals.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,9 +120,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		41FE1AFC232FBB7900B94E97 /* OscarMike */ = {
+		41FE1AFC232FBB7900B94E97 /* OscarMikeReferrals */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 41FE1B12232FBB7D00B94E97 /* Build configuration list for PBXNativeTarget "OscarMike" */;
+			buildConfigurationList = 41FE1B12232FBB7D00B94E97 /* Build configuration list for PBXNativeTarget "OscarMikeReferrals" */;
 			buildPhases = (
 				41FE1AF9232FBB7900B94E97 /* Sources */,
 				41FE1AFA232FBB7900B94E97 /* Frameworks */,
@@ -132,9 +132,9 @@
 			);
 			dependencies = (
 			);
-			name = OscarMike;
+			name = OscarMikeReferrals;
 			productName = OscarMike;
-			productReference = 41FE1AFD232FBB7900B94E97 /* O-M (On The Move).app */;
+			productReference = 41FE1AFD232FBB7900B94E97 /* O-M Referrals.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -152,7 +152,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 41FE1AF8232FBB7900B94E97 /* Build configuration list for PBXProject "OscarMike" */;
+			buildConfigurationList = 41FE1AF8232FBB7900B94E97 /* Build configuration list for PBXProject "OscarMikeReferrals" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -165,7 +165,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				41FE1AFC232FBB7900B94E97 /* OscarMike */,
+				41FE1AFC232FBB7900B94E97 /* OscarMikeReferrals */,
 			);
 		};
 /* End PBXProject section */
@@ -341,6 +341,7 @@
 		41FE1B13232FBB7D00B94E97 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56F54J4H3N;
 				INFOPLIST_FILE = "$(SRCROOT)/OscarMike/Resources/Info.plist";
@@ -349,8 +350,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MobileSoftwareServices.OnTheMove;
-				PRODUCT_NAME = "O-M (On The Move)";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSoftwareServices.OscarMikeReferrals;
+				PRODUCT_NAME = "O-M Referrals";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -359,6 +361,7 @@
 		41FE1B14232FBB7D00B94E97 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 56F54J4H3N;
 				INFOPLIST_FILE = "$(SRCROOT)/OscarMike/Resources/Info.plist";
@@ -367,8 +370,9 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = MobileSoftwareServices.OnTheMove;
-				PRODUCT_NAME = "O-M (On The Move)";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = MobileSoftwareServices.OscarMikeReferrals;
+				PRODUCT_NAME = "O-M Referrals";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -377,7 +381,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		41FE1AF8232FBB7900B94E97 /* Build configuration list for PBXProject "OscarMike" */ = {
+		41FE1AF8232FBB7900B94E97 /* Build configuration list for PBXProject "OscarMikeReferrals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41FE1B10232FBB7D00B94E97 /* Debug */,
@@ -386,7 +390,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		41FE1B12232FBB7D00B94E97 /* Build configuration list for PBXNativeTarget "OscarMike" */ = {
+		41FE1B12232FBB7D00B94E97 /* Build configuration list for PBXNativeTarget "OscarMikeReferrals" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				41FE1B13232FBB7D00B94E97 /* Debug */,
