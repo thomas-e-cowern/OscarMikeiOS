@@ -57,6 +57,11 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
         
         // Set up numberpad for phone textfield
         phoneTextField.keyboardType = .numberPad
+        spousePhone.keyboardType = .numberPad
+        
+        // Set up email fields for email keyboard
+        emailTextField.keyboardType = .emailAddress
+        spouseEmail.keyboardType = .emailAddress
         
         
     }
