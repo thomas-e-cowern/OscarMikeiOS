@@ -43,6 +43,9 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
         nameTextField.delegate = self
         phoneTextField.delegate = self
         emailTextField.delegate = self
+        spousePhone.delegate = self
+        spouseEmail.delegate = self
+        spuseName.delegate = self
         
         // Pickerview Setup
         militaryServicePicker.isHidden = true
