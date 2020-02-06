@@ -55,6 +55,9 @@ class PersonalInfoViewController: UIViewController, UIPickerViewDelegate, UIPick
         // Set up spouse info fields
         spuseInfoStackview.isHidden = true
         
+        // Set up numberpad for phone textfield
+        phoneTextField.keyboardType = .numberPad
+        
         
     }
     
