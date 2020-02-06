@@ -77,6 +77,9 @@ class HomeInfoViewController: UIViewController, UIPickerViewDelegate, UIPickerVi
         bathroomsPicker.isHidden = true
         flooringPreferencePicker.isHidden = true
         
+        // Sq foot textfield numerical keypad
+        sqFootTextfield.keyboardType = .numberPad
+        
         // Set up tapping on screen hides keyboard
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         view.addGestureRecognizer(tapGesture)
